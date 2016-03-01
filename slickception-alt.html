@@ -9,7 +9,7 @@
     <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700,100italic,300,300italic,400italic,500,500italic,700italic,900,900italic' rel='stylesheet' type='text/css' />
     <link rel="stylesheet" type="text/css" href="libs/slick/slick/slick.css" />
     <link rel="stylesheet" type="text/css" href="libs/slick/slick/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick-test.css" />
+    <link rel="stylesheet" type="text/css" href="css/slick-alt.css" />
 </head>
 
 <body>
@@ -24,8 +24,8 @@
     </header>
     <div id="main-container">
         <div class="section-scroller">
-            <div class="outer-section" style="background:white">
-                <div class="scroller">
+            <div class="outer-section" id="feature0" style="background:white">
+                <div class=" scroller">
                     page 1
                     <div class="inner-scroll-feature" style="background:orange">
                         section 1
@@ -41,7 +41,7 @@
                     </div>
                 </div>
             </div>
-            <div class="outer-section" style="background:white">
+            <div class="outer-section" id="feature1" style="background:white">
                 <div class=" troller">
                     page 2
                     <div class="inner-scroll-feature" style="background:#00FF08">
@@ -58,8 +58,18 @@
                     </div>
                 </div>
             </div>
-            <div class="outer-section" style="background:brown">
-
+            <div class="outer-section" id="feature2" style="background:brown">
+                <div class="">
+                    page 3
+                    <div class="inner-scroll-feature" style="background:red">
+                    </div>
+                    <div class="inner-scroll-feature" style="background:blue">
+                    </div>
+                    <div class="inner-scroll-feature" style="background:green">
+                    </div>
+                    <div class="inner-scroll-feature" style="background:yellow">
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -71,7 +81,10 @@
 <script type="text/javascript">
     $(document).ready(function() {
         var baloon = $('#scrollDownContainer');
-
+        var page = 0;
+        $('html, body').animate({
+            scrollTop: 0
+        }, 500);
         function runIt() {
             baloon.animate({
                 bottom: '+=15'
@@ -85,7 +98,7 @@
         $('.scroller').slick({
             autoplay: false,
             autoplaySpeed: 500,
-            draggable: false,
+            draggable: true,
             vertical: true,
             dots: false,
             arrows: false,
@@ -99,53 +112,68 @@
             vertical: true,
             dots: false,
             arrows: false,
-            infinite:true,
+            infinite: false,
             initialSlide: 0
         });
-        $('.section-scroller').slick({
-            autoplay: false,
-            autoplaySpeed: 2000,
-            draggable: true,
-            adaptiveHeight: false,
-            vertical: true,
-            dots: true,
-            arrows: true
-        });
-        var windowHeight = $(window).height();
-            $('.outer-section.slick-slide').height(windowHeight-100)
+
+
+
         $(window).bind('wheel', function(event, delta) {
             // var scroll = $(window).scrollTop();
-            if (event.originalEvent.deltaY >
-                0) {
-                if ($('.section-scroller').slick('slickCurrentSlide') == 0) {
+            console.log(page);
+            if (event.originalEvent.deltaY > 0) {
+                if (page == 0) {
                     $('.scroller').slick('slickNext');
-                } else if ($('.section-scroller').slick('slickCurrentSlide') == 1) {
+                } else if (page == 1) {
                     $('.troller').slick('slickNext');
-                } else if ($('.section-scroller').slick('slickCurrentSlide') == 2) {}
+                } else if (page == 2) {}
             } else {
-                console.log("page " + $('.section-scroller').slick('slickCurrentSlide'));
-                if ($('.section-scroller').slick('slickCurrentSlide') == 0) {
+                console.log("page " + page);
+                if (page == 0) {
                     $('.scroller').slick('slickPrev');
-                } else if ($('.section-scroller').slick('slickCurrentSlide') == 1) {
+                } else if (page == 1) {
                     $('.troller').slick('slickPrev');
-                } else if ($('.section-scroller').slick('slickCurrentSlide') == 2) {
-                //    $('.section-scroller').slick('slickPrev');
-                    $('.troller')[0].slick.slickGoTo(parseInt(3));
+                } else if (page == 2) {
+                    $('html, body').animate({
+                        scrollTop: $("#feature1").offset().top,
+                    }, 500);
+                //    $('.troller')[0].slick.slickGoTo(parseInt(3));
                 }
             }
         });
 
+
+
         $('.scroller').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
             if (currentSlide == 3 && nextSlide == 0) {
-                $('.section-scroller').slick('slickNext');
-                $('.troller')[0].slick.slickGoTo(parseInt(0));
+
+
+                    $('html, body').animate({
+                        scrollTop: $("#feature1").offset().top,
+                    }, 500);
+
+                page++;
+            //    $('.troller')[0].slick.slickGoTo(parseInt(0));
             }
         })
         $('.troller').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
             if (currentSlide == 3 && nextSlide == 0) {
-                $('.section-scroller').slick('slickNext');
+
+
+
+                                    $('html, body').animate({
+                                        scrollTop: $("#feature2").offset().top,
+                                    }, 500);
+
+                page++;
+
             } else if (currentSlide == 0 && nextSlide == 3) {
-                $('.section-scroller').slick('slickPrev');
+
+            console.log($("#feature1"));
+            $('html, body').animate({
+                scrollTop: $("#feature0").offset().top,
+            }, 500);
+            page--;
                 $('.scroller')[0].slick.slickGoTo(parseInt(3));
             }
         })

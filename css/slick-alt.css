@@ -536,3 +536,6 @@ footer {
 .slick-dots li button:before {
     font-size: 20px;
 }
+.section-scroller {
+    height: 100%;
+}
