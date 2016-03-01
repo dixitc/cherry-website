@@ -484,7 +484,7 @@ footer {
 }
 
 
-.scroller {
+/*.scroller {
     position: relative;
     top: 200px;
     height: 200px;
@@ -504,21 +504,14 @@ footer {
 .slick-slide .inner-scroll-feature{
     height: 200px;
 }
+*/
+
+/**/
 .slick-vertical .slick-slide {
     height: 200px;
 }
-
-/**/
-
 #main-container {
     height: 100%;
-}
-.slick-slider {
-    height: 100%;
-}
-
- .outer-section.slick-slide {
-    height: 1000px;
 }
 .scroller1 {
     top: 200px;
@@ -530,4 +523,11 @@ footer {
     top: 200px;
     width: 80%;
     margin: auto;   
+}
+.slick-slider {
+    height: 100%;
+}
+
+ .outer-section.slick-slide {
+    height: 1000px;
 }
