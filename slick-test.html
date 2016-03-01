@@ -75,6 +75,7 @@
             <p data-step="1" data-intro="Ok, wasn't that fun?">stuff 1</p>
             <p data-step="2" data-intro="Ok, wasn't that fun?">stuff 2</p>
             <p data-step="3" data-intro="Ok, wasn't that fun?">stuff 3</p>
+            <p data-step="4" data-intro="Ok, wasn't that fun?">stuff 3</p>
 
 
         </section>
@@ -186,7 +187,8 @@
                             intro.start();
                         } else {
                             start++;
-                            $('.introjs-button.introjs-nextbutton').click()
+                            intro.nextStep()
+                            //$('.introjs-button.introjs-nextbutton').click()
                         }
                         $('.troller').slick('slickNext');
                     } else {
@@ -204,14 +206,15 @@
 
 
                         } else {
-                            $('.introjs-button.introjs-prevbutton').click()
+                            intro.previousStep();
+                        //    $('.introjs-button.introjs-prevbutton').click()
                             start--;
                         }
                         $('.troller').slick('slickPrev');
                     } else {
                         if (page == 2) {
                             $('.troller')[0].slick.slickGoTo(parseInt(3));
-                            intro.goToStep(3).start();
+
 
                         }
                         $('.slickMobile').slick('slickPrev');
@@ -236,7 +239,9 @@
 
         $('.troller').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
 
-
+        if (currentSlide == 2) {
+            intro.goToStep(2);
+        }
 
             if (currentSlide == 3 && nextSlide == 0) {
                 $('.slickMobile').slick('slickNext');
