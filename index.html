@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cherry</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700,100italic,300,300italic,400italic,500,500italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="libs/slick/slick/slick.css" />
+        <link rel="stylesheet" type="text/css" href="libs/slick/slick/slick-theme.css" />
+        <link rel="stylesheet" type="text/css" href="css/prev.css">
+    </head>
+
+    <body>
+        <header>
+            <nav>
+                <div id="headerTitle">
+                    <span>
+                    </span>
+                    cherry
+                </div>
+                
+            </nav>
+        </header>
+        <div class="sectionScroller">
+            <section id="feature0">
+                <div class='mobileOverlay'>
+                    <div id="mobile" class="slickMobile content ">
+                        <div>
+                            <img class="screenImage" src="assets/images/cherry-screen-1.png">
+                        </div>
+                        <div>
+                            <img class="screenImage" src="assets/images/cherry-screen-2.png">
+                        </div>
+                        <div>
+                            <img class="screenImage" src="assets/images/cherry-screen-3.png">
+                        </div>
+                        <div>
+                            <img class="screenImage" src="assets/images/cherry-screen-4.png">
+                        </div>
+                        <div>
+                            <img class="screenImage" src="assets/images/cherry-screen-5.png">
+                        </div>
+                        <div>
+                            <img class="screenImage" src="assets/images/cherry-screen-6.png">
+                        </div>
+                    </div>
+                </div>
+                
+                
+                
+            </section>
+            <div id="scrollDownContainer">
+                <div class="center" onclick="slickNext()">
+                    <img id="scrollDownElement" src="assets/images/scroll-down.png">
+                </div>
+            </div>
+              <section id="feature1">
+                <div class="videoOverlay" id="brand">
+                 
+                    </div>
+            </section>
+            <section id="feature2">
+                <div class="videoOverlay" id="brand">
+                  
+                    </div>
+            </section>
+            <section id="feature3">
+                <div class="videoOverlay" id="brand">
+                 
+                    </div>
+            </section>
+            <section id="feature4">
+                <div class="videoOverlay" id="brand">
+                    <div id="text">
+                  
+                    </div>
+            </section>
+            <section id="feature5">
+                <div class="videoOverlay" id="brand">
+                   
+                </div>
+            </section>
+                <footer>
+                    <p>Copyright 2015 Tricon Infotech Pvt. Ltd. All rights reserved.</p>
+                    <div>
+                        <span>
+                            TERMS OF USE
+                        </span>
+                    </div>
+                </footer>
+        </div>
+    </body>
+        <script type="text/javascript" src="libs/jquery.min.js"></script>
+        <script type="text/javascript" src="libs/slick/slick/slick.min.js"></script>
+        <script type="text/javascript">
+        var baloon = $('#scrollDownContainer');
+
+        function runIt() {
+            baloon.animate({
+                bottom: '+=15'
+            }, 400);
+            baloon.animate({
+                bottom: '-=15'
+            }, 400, runIt);
+        }
+
+
+        window.requestAnimationFrame(runIt);
+
+        function goToFeatures() {
+            $('.slickMobile').slick('slickGoTo', 1);
+        }
+
+        function goToContact() {
+            $('.slickMobile').slick('slickGoTo', 5);
+        }
+
+        function goToHome() {
+            $('.slickMobile').slick('slickGoTo', 0);
+        }
+
+        function slickNext() {
+            $('.slickMobile').slick('slickNext');
+        }
+        $(document).ready(function() {
+            var position = 0;
+            $('html, body').animate({
+                scrollTop: $("#feature" + 0).offset().top
+            }, 500);
+            $('.slickMobile').slick({
+                autoplay: false,
+                autoplaySpeed: 2000,
+                draggable: true,
+                dots: true,
+                arrows: true
+
+            });
+
+            $(function() {
+            
+                $(window).bind('wheel', function(event, delta) {
+                    var scroll = $(window).scrollTop();
+
+                    console.log(event.originalEvent.deltaY);
+                    if (event.originalEvent.deltaY > 0) {
+
+                        $('.slickMobile').slick('slickNext');
+                    } else {
+                        $('.slickMobile').slick('slickPrev');
+                    }
+
+
+
+                });
+            });
+
+
+
+
+            // On before slide change
+            $('.slickMobile').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+                console.log(nextSlide)
+                console.log($("#feature" + nextSlide)[0]);
+                console.log("video");
+                console.log($('video')[0]);
+                if (nextSlide == 5) {
+                    $('#mobile').css('visibility', 'hidden');
+                } else {
+                    $('#mobile').css('visibility', 'visible');
+                    if (nextSlide == 1) {
+                        $('video').css("-webkit-filter", "grayscale(1) brightness(1.2) contrast(1.05)")
+                    } else if (nextSlide == 2) {
+                        $('video').css("-webkit-filter", "sepia(0.5) hue-rotate(-30deg) saturate(1.2) contrast(0.8)")
+
+                    } else if (nextSlide == 3) {
+                        $('video').css("-webkit-filter", "sepia(0.4) saturate(2.5) hue-rotate(-30deg) contrast(0.67)")
+
+                    }
+                }
+
+
+                if ($("#feature" + nextSlide)[0]) {
+
+                    $('html, body').animate({
+                        scrollTop: $("#feature" + nextSlide).offset().top,
+                    }, 500);
+                }
+            });
+        });
+
+        </script>
+
+</html>
+

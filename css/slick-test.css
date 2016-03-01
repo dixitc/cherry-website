@@ -1,0 +1,533 @@
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+p {
+    margin: 0px;
+}
+
+@font-face {
+    font-family: "pacifico";
+    src: url("D:\\getCherry\\assets\\Pacifico.ttf")
+}
+
+@font-face {
+    font-family: "slick";
+    src: url("../libs/slick/slick/fonts/slick.woff")
+}
+
+@font-face {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Roboto Black'), local('Roboto-Black');
+    unicode-range: U+0460-052F, U+20B4, U+2DE0-2DFF, U+A640-A69F;
+}
+
+body {
+    font-family: 'Roboto';
+    font-size: 100%;
+    overflow: hidden;
+}
+
+header {
+    height: 60px;
+    position: fixed;
+    z-index: 20;
+    /*background-color: rgba(74, 73, 73, 0.41);*/
+    width: 100%;
+    top: 0;
+    color: black;
+}
+
+#headerTitle {
+    display: inline-block;
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    vertical-align: middle;
+    margin-left: 20%;
+    font-size: 1.5em;
+}
+
+nav {
+    height: 100%;
+}
+
+#headerUl {
+    margin: 0px;
+    padding: 0px;
+    height: 60px;
+    margin-right: 20%;
+    display: inline-block;
+    list-style-type: none;
+    float: right;
+}
+
+.headerLi {
+    font-size: 1.2em;
+    height: 100%;
+    line-height: 60px;
+    padding: 0 1em 0 1em;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#mobile {
+    position: fixed;
+    top: 20%;
+    z-index: 1;
+    left: 25%;
+    background: rgba(0, 0, 0, 0.51);
+    border: solid #4242C3 10px;
+    border-top: solid #4242C3 60px;
+    border-bottom: solid #4242C3 40px;
+    border-color: firebrick;
+    height: 26.5em;
+    width: 15em;
+    box-sizing: initial;
+    border-radius: 23px;
+}
+
+#speaker {
+    height: 10px;
+    width: 20px;
+    position: fixed;
+    background-color: rgba(255, 255, 255, 0.74);
+    border-radius: 20px;
+    top: calc(20% + 25px);
+    left: calc(25% + 120px);
+    z-index: 10;
+}
+
+#mobile img {}
+.mobileOverlay{
+    display: none;
+}
+
+
+
+.videoOverlay {
+    width: 100%;
+}
+
+.smallText {
+    font-size: 15px;
+}
+
+.bigText {
+    font-size: 3.5em;
+}
+
+.mediumText {
+    font-size: 1.4em;
+}
+
+.unstyledAnchor{
+    text-decoration: none;
+}
+
+#secondLine {
+    margin: auto;
+    /*padding-bottom: 30px;*/
+}
+.footBarLeft {
+    position: fixed;
+    bottom: 20;
+    left: 50;
+}
+
+.footBarRight {
+    position: fixed;
+    bottom: 20;
+    right: 50;
+}
+
+.downloadImg {
+    max-height: 50px;
+}
+
+#brand {
+    top: 22%;
+    position: relative;
+    z-index: 10;
+    /*width: 60%;
+    margin: auto;*/
+}
+
+.formInline {
+    margin-top: 1em;
+}
+
+#video-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    background: transparent url(video-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+#iframesad-bg {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: auto;
+    min-width: 100%;
+    height: auto;
+    min-height: 100%;
+    z-index: -100;
+    background: transparent url(video-bg.jpg) no-repeat;
+    background-size: cover;
+}
+
+#feature0 {
+    height: 100%;
+    width: 100%;
+    display: table;
+    /*background: -webkit-radial-gradient( #E3E8D4, #68586C);
+    background: -o-radial-gradient( #E3E8D4, #68586C);
+    background: -moz-radial-gradient( #E3E8D4, #68586C);
+    background: radial-gradient( #E3E8D4, #68586C);*/
+}
+
+#text {
+    padding-top: 20px;
+    /*margin-left: 330px;*/
+    position: absolute;
+    left: calc(25% + 350px);
+}
+
+#textGradient {
+    background: -webkit-linear-gradient(#F1086E, #F7631E);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+/*#feature2 #textGradient{
+     background: -webkit-linear-gradient(#ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+}
+
+#feature3 #textGradient{
+     background: -webkit-linear-gradient(#ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+}
+
+#feature4 #textGradient{
+     background: -webkit-linear-gradient(#ffffff, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;   
+} */
+
+.mainText {
+    line-height: 4.5em;
+    font-weight: 500;
+    margin: 0px;
+}
+
+#feature0 .bigText {
+    font-size: 4.5em
+}
+
+#feature0 .mainText {
+    font-weight: 800;
+}
+
+#feature0 #secondLine {
+    padding-bottom: 20px;
+}
+
+#detail {
+    margin-top: 30px;
+}
+
+.detailText {
+    color: white;
+    line-height: 2em;
+    font-weight: 200;
+}
+
+.screenImage {
+    width: 100%;
+    background-color: transparent;
+}
+
+#scrollDownContainer {
+    z-index: 20;
+    position: fixed;
+    width: 100%;
+    bottom: 30px;
+}
+
+#scrollDownElement {
+    position: relative;
+    height: 2em;
+    background-color: transparent;
+}
+
+.center {
+    margin: auto;
+    background-color: transparent;
+    text-align: center;
+}
+
+#submit {
+    background: transparent;
+    display: inline-block;
+    border: none;
+}
+
+.submitImg {
+    height: 2.4em;
+    width: 2.4em;
+}
+
+.form-control {
+    width: 200px;
+    display: inline-block;
+}
+
+.inputField {
+    float: left;
+    height: 34px;
+    width: 250px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+section {
+    height: 100%;
+    width: 100%;
+}
+
+#feature1 {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0.21);
+    position: relative;
+}
+
+#feature2 {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 128, 0, 0.43);
+    position: relative;
+}
+
+#feature3 {
+    background-color: rgba(254, 255, 36, 0.63);
+}
+
+#feature4 {
+    background-color: rgba(0, 140, 255, 0.47);
+}
+
+@media screen and (max-width: 1200px) {
+    body {
+        font-size: 80%;
+    }
+    #mobile {
+        left: 15%;
+    }
+    .bigText {
+        font-size: 2.8em;
+    }
+    #text {
+        padding-top: 20px;
+        /*margin-left: 330px;*/
+        position: absolute;
+        left: calc(15% + 300px);
+    }
+}
+
+@media screen and (max-width: 360px) {
+    #text {
+        display: none;
+    }
+}
+
+.slick-dots {
+    position: fixed;
+    right: 30px;
+    top: 40%;
+    width: 20px;
+}
+
+.slick-prev {
+    left: -50px;
+}
+
+.slick-next {
+    right: -50px;
+}
+
+.slick-prev:before {
+    content: "\2190";
+}
+
+.slick-next:before {
+    content: "\2192";
+}
+
+#headerTitle img {
+    height: 36px;
+    width: 36px;
+}
+
+.slick-dots li.slick-active button:before {
+    content: "\25cf";
+}
+
+.slick-dots li button:before {
+    content: "\25cf";
+    font-size: 10px;
+}
+
+#feature5 #text {
+    width: 30em;
+    margin: auto;
+    position: relative;
+    left: 0px;
+    text-align: center;
+}
+
+#feature5 .center {
+    width: 100%;
+    height: auto;
+}
+
+textarea {
+    width: 100%;
+    height: 20%;
+    max-height: 200px;
+    border-radius: 5px;
+    margin-bottom: 4em;
+}
+
+#feature5 .inputField {
+    margin-bottom: 2em;
+    float: none;
+    width: 100%;
+}
+
+#feature5 #brand {
+    top: 12%;
+}
+
+.centerText{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+
+#submitFeedback {
+    height: 40px;
+    width: 30%;
+    color: whitesmoke;
+    min-width: 200px;
+    border: none;
+    background-color: #0BBF0B;
+    border-bottom: solid #048E02 5px;
+    border-right: solid #048E02 4px;
+    border-radius: 4px;
+}
+
+#feature5 .mainText {
+    text-align: left;
+}
+
+#feature5 #detail {
+    text-align: left;
+    margin-bottom: 2em;
+}
+
+#feature5 hr {
+    margin-top: 2em;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    top: 200;
+    text-align: center;
+}
+
+.downloadHeader{
+    position: fixed;
+    right: 50px;
+    height: 60px;
+    width: 300px;
+    border: solid 1px black;
+}
+
+.sectionScroller {
+    height: 100%;
+}
+
+
+.scroller {
+    position: relative;
+    top: 200px;
+    height: 200px;
+    width: 80%;
+    margin: auto;
+}
+
+.inner-scroll-feature {
+    height: 100%;
+}
+
+.slick-list , .slick-track {
+    height: 200px;
+}
+
+
+.slick-slide .inner-scroll-feature{
+    height: 200px;
+}
+.slick-vertical .slick-slide {
+    height: 200px;
+}
+
+/**/
+
+#main-container {
+    height: 100%;
+}
+.slick-slider {
+    height: 100%;
+}
+
+ .outer-section.slick-slide {
+    height: 1000px;
+}
+.scroller1 {
+    top: 200px;
+    width: 80%;
+    margin: auto;
+}
+
+.scroller2 {
+    top: 200px;
+    width: 80%;
+    margin: auto;   
+}
