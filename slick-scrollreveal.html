@@ -9,7 +9,7 @@
     <link rel="stylesheet" type="text/css" href="libs/intro/introjs.min.css" />
     <link rel="stylesheet" type="text/css" href="libs/intro/introjs-rtl.css" />
     <link rel="stylesheet" type="text/css" href="libs/slick/slick/slick-theme.css" />
-    <link rel="stylesheet" type="text/css" href="css/slick-test.css">
+    <link rel="stylesheet" type="text/css" href="css/slick-scrollreveal.css">
 </head>
 
 <body>
@@ -25,6 +25,8 @@
     <div class="sectionScroller">
         <section id="feature0">
 
+                      <div class="foo"> Foo </div>
+                      <div class="foo" id="chocolate"> Chip </div>
             <div class='mobileOverlay'>
                 <div id="mobile" class="slickMobile content ">
                     <div>
@@ -48,22 +50,22 @@
             <div class="scroller">
                 <div class="inner-scroll-feature" style="background:#3e3947">
                   <p>
-                    Collect photos and share with your family and friends.
+                    lorem ipsum
                   </p>
                 </div>
                 <div class="inner-scroll-feature" style="background:#745360">
                   <p>
-                    Get all the photos you didn't take from your friends.
+                    lorem ipsum
                   </p>
                 </div>
                 <div class="inner-scroll-feature" style="background:#3e3947">
                   <p>
-                    preserve those special moments with your loved ones
+                    lorem ipsum
                   </p>
                 </div>
                 <div class="inner-scroll-feature" style="background:#745360">
                   <p>
-                    cherry is secure.
+                    lorem ipsum
                   </p>
                 </div>
             </div>
@@ -82,22 +84,22 @@
             </div>
             <div class="outer">
               <div class="middle">
-                <div class="inner test-mobile">
+                <div class="inner">
                   <div class="feature-wrapper">
 
-                    <div class="intro-feature intro1" data-step="1" data-intro="feature 1 is awesome" data-position="left">
+                    <div class="intro-feature intro1" data-step="1" data-intro="feature 1 is awesome" data-position="right">
 
                     </div>
-                    <div class="intro-feature intro2"  data-step="2" data-intro="feature 2 is also awesome" data-position="right">
+                    <div class="intro-feature intro2"  data-step="2" data-intro="feature 2 is also awesome" data-position="left">
 
                     </div>
                   </div>
                   <div class="feature-wrapper">
 
-                    <div class="intro-feature intro3" data-step="3" data-intro="feature 3 is pretty cool" data-position="left">
+                    <div class="intro-feature intro3" data-step="3" data-intro="feature 3 is pretty cool" data-position="right">
 
                     </div>
-                    <div class="intro-feature intro4"  data-step="4" data-intro="feature 4 is epic" data-position="right">
+                    <div class="intro-feature intro4"  data-step="4" data-intro="feature 4 is epic" data-position="left">
 
                     </div>
                   </div>
@@ -107,7 +109,20 @@
             </div>
 
 
+            <ul class="dots-wrapper">
+              <li>
 
+              </li>
+              <li>
+
+              </li>
+              <li>
+
+              </li>
+              <li>
+
+              </li>
+            </ul>
 
         </section>
         <section id="feature2">
@@ -133,6 +148,8 @@
 <script type="text/javascript" src="libs/jquery.min.js"></script>
 <script type="text/javascript" src="libs/intro/intro.min.js"></script>
 <script type="text/javascript" src="libs/slick/slick/slick.min.js"></script>
+<script src="https://cdn.jsdelivr.net/scrollreveal.js/3.0.9/scrollreveal.min.js"></script>
+
 <script type="text/javascript">
     var baloon = $('#scrollDownContainer');
 
@@ -149,35 +166,21 @@
     window.requestAnimationFrame(runIt);
 
     $(document).ready(function() {
+
+      var fooReveal = {
+        delay    : 200,
+        distance : '1090px',
+        easing   : 'ease-in-out',
+        rotate   : { z: 10 },
+        scale    : 1.1
+      };
+var barContainer = document.getElementById('feature0');
+      window.sr = ScrollReveal();
+      sr.reveal( '.foo', fooReveal ,{ container: barContainer , distance : '2500px' , duration:1000 } );
+      sr.reveal( '#chocolate', { delay: 1500, scale: 0.9, container: barContainer , distance : '2500px' , duration : 1000 } );
         var position = 0;
         var page = 0;
-        $('html, body').animate({
-            scrollTop: $("#feature" + 0).offset().top
-        }, 500);
 
-        $('.scroller').slick({
-            autoplay: false,
-            autoplaySpeed: 2000,
-            draggable: true,
-            vertical: true,
-            speed : 1000,
-            dots: true,
-            infinite : false,
-            adaptiveHeight : true,
-            arrows: true
-
-        });
-
-        $('.slickMobile').slick({
-            autoplay: false,
-
-            autoplaySpeed: 2000,
-            draggable: true,
-            infinite: false,
-            dots: true,
-            arrows: true
-
-        });
 
         window.onresize = function(event) {
 resizeDiv();
@@ -193,64 +196,7 @@ $('.slick-vertical .slick-slide').css({'height': vph + 'px'});
         var intro = introJs();
         $(function() {
 
-            $(window).bind('wheel', function(event, delta) {
-                var scroll = $(window).scrollTop();
-                console.log('page ' + page);
-                console.log('start '+start);
-                if (event.originalEvent.deltaY > 0) {
 
-                    if (page == 0) {
-                      if($('.scroller').slick('slickCurrentSlide') == 3){
-                        $('.slickMobile').slick('slickNext');
-                      }else{
-
-                        $('.scroller').slick('slickNext');
-                      }
-                    } else if (page == 1) {
-
-
-                 if(start < 3){
-                          start++;
-                          intro.nextStep();
-
-                        } else {
-
-
-intro.exit();
-
-                          $('.slickMobile').slick('slickNext');
-                            //$('.introjs-button.introjs-nextbutton').click()
-                        }
-                        //$('.troller').slick('slickNext');
-                    } else {
-                        $('.slickMobile').slick('slickNext');
-                    }
-                    //$('.slickMobile').slick('slickNext');
-                } else {
-                    if (page == 0) {
-
-
-                        $('.scroller').slick('slickPrev');
-                    } else if (page == 1) {
-                        if(start == 0){
-                          intro.exit();
-                            $('.slickMobile').slick('slickPrev');
-                            $('.scroller')[0].slick.slickGoTo(parseInt(3));
-                        }else{
-                          intro.previousStep();
-                          start--;
-                        }
-                        //$('.troller').slick('slickPrev');
-                    } else {
-
-                        $('.slickMobile').slick('slickPrev');
-
-                    }
-                }
-
-
-
-            });
         });
 
 
@@ -318,7 +264,7 @@ var setIntro = 0;
 
                 $('html, body').animate({
                     scrollTop: $("#feature" + nextSlide).offset().top,
-                }, 600);
+                }, 500);
             }
         });
     });

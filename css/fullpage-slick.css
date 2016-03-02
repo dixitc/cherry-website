@@ -644,6 +644,7 @@ color: black; opacity: 0.25;
     display: table;
     position: absolute;
     height: 100%;
+    top:0;
     width: 100%;
 }
 
@@ -659,22 +660,10 @@ color: black; opacity: 0.25;
     height: 50%;
     margin-left: auto;
 margin-right: auto;
-height: 64%;
+height: 50%;
 width: 47%;
 background: firebrick;
-max-width: 260px;
-}
-
-.inner.test-mobile {
-
-        background: rgba(0, 0, 0, 0.51);
-    border: solid #4242C3 10px;
-    border-top: solid #4242C3 60px;
-    border-bottom: solid #4242C3 40px;
-    border-color: firebrick;
-
-    box-sizing: initial;
-    border-radius: 23px;
+max-width: 300px;
 }
 
 
@@ -718,4 +707,24 @@ ul.slick-dots {
 
 div.introjs-tooltipbuttons,.introjs-bullets {
   visibility: hidden;
+}
+
+.scroll-icon {
+    position: absolute;
+    left: 50%;
+    bottom: 30px;
+    padding: 0 10px;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+}
+
+.icon-up-open-big:after {
+    content: "a";
+    font-size: 2.5em;
+    display: block;
+    -webkit-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+    color: black;
+    -webkit-transition: color .3s;
+    transition: color .3s;
 }
