@@ -72,9 +72,25 @@
                 <div class="inner-scroll-feature" style="background:green"></div>
                 <div class="inner-scroll-feature" style="background:yellow"></div>
             </div>
-            <p data-step="1" data-intro="Ok, wasn't that fun?">stuff 1</p>
-            <p data-step="2" data-intro="Ok, wasn't that fun?">stuff 2</p>
-            <p data-step="3" data-intro="Ok, wasn't that fun?">stuff 3</p>
+            <div class="feature-wrapper">
+
+            <div class="intro-feature intro1" data-step="1" data-intro="feature 1 is awesome" data-position="right">
+
+            </div>
+            <div class="intro-feature intro2"  data-step="2" data-intro="feature 2 is also awesome" data-position="left">
+
+            </div>
+          </div>
+          <div class="feature-wrapper">
+
+          <div class="intro-feature intro3" data-step="3" data-intro="feature 3 is pretty cool" data-position="right">
+
+          </div>
+          <div class="intro-feature intro4"  data-step="4" data-intro="feature 4 is epic" data-position="left">
+
+          </div>
+        </div>
+
 
 
         </section>
@@ -116,45 +132,24 @@
 
     window.requestAnimationFrame(runIt);
 
-    function goToFeatures() {
-        $('.slickMobile').slick('slickGoTo', 1);
-    }
-
-    function goToContact() {
-        $('.slickMobile').slick('slickGoTo', 5);
-    }
-
-    function goToHome() {
-        $('.slickMobile').slick('slickGoTo', 0);
-    }
-
-    function slickNext() {
-        $('.slickMobile').slick('slickNext');
-    }
     $(document).ready(function() {
         var position = 0;
         var page = 0;
         $('html, body').animate({
             scrollTop: $("#feature" + 0).offset().top
         }, 500);
+
         $('.scroller').slick({
             autoplay: false,
             autoplaySpeed: 2000,
             draggable: true,
             vertical: true,
             dots: true,
+            adaptiveHeight : true,
             arrows: true
 
         });
-        $('.troller').slick({
-            autoplay: false,
-            autoplaySpeed: 2000,
-            draggable: true,
-            vertical: true,
-            dots: true,
-            arrows: true
 
-        });
         $('.slickMobile').slick({
             autoplay: false,
             autoplaySpeed: 2000,
@@ -171,24 +166,29 @@
 
             $(window).bind('wheel', function(event, delta) {
                 var scroll = $(window).scrollTop();
-
-                console.log(page);
+                console.log('page ' + page);
+                console.log('start '+start);
                 if (event.originalEvent.deltaY > 0) {
 
                     if (page == 0) {
 
                         $('.scroller').slick('slickNext');
                     } else if (page == 1) {
-                        console.log(start);
-                        if (start == 0) {
 
-                            start++;
-                            intro.start();
+
+                 if(start <= 3){
+                          start++;
+                          intro.nextStep();
+
                         } else {
-                            start++;
-                            $('.introjs-button.introjs-nextbutton').click()
+
+
+intro.exit();
+
+                          $('.slickMobile').slick('slickNext');
+                            //$('.introjs-button.introjs-nextbutton').click()
                         }
-                        $('.troller').slick('slickNext');
+                        //$('.troller').slick('slickNext');
                     } else {
                         $('.slickMobile').slick('slickNext');
                     }
@@ -199,22 +199,19 @@
 
                         $('.scroller').slick('slickPrev');
                     } else if (page == 1) {
-                        if (start == 0) {
-
-
-
-                        } else {
-                            $('.introjs-button.introjs-prevbutton').click()
-                            start--;
+                        if(start == 0){
+                          intro.exit();
+                            $('.slickMobile').slick('slickPrev');
+                            $('.scroller')[0].slick.slickGoTo(parseInt(3));
+                        }else{
+                          intro.previousStep();
+                          start--;
                         }
-                        $('.troller').slick('slickPrev');
+                        //$('.troller').slick('slickPrev');
                     } else {
-                        if (page == 2) {
-                            $('.troller')[0].slick.slickGoTo(parseInt(3));
-                            intro.goToStep(3).start();
 
-                        }
                         $('.slickMobile').slick('slickPrev');
+
                     }
                 }
 
@@ -229,28 +226,30 @@
 
             if (currentSlide == 3 && nextSlide == 0) {
                 $('.slickMobile').slick('slickNext');
-                $('.troller')[0].slick.slickGoTo(parseInt(0));
+                start++;
+                intro.start();
+          //      $('.troller')[0].slick.slickGoTo(parseInt(0));
 
             }
         })
 
-        $('.troller').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
-
-
-
-            if (currentSlide == 3 && nextSlide == 0) {
-                $('.slickMobile').slick('slickNext');
-                intro.exit();
-            } else if (currentSlide == 0 && nextSlide == 3) {
-                $('.slickMobile').slick('slickPrev');
-                $('.scroller')[0].slick.slickGoTo(parseInt(3));
-                intro.exit();
-            }
-        })
+$('.slickMobile').on('afterChange' , function (event ,slick , currentSlide) {
+  console.log('afterChage');
+  console.log('currentSlide');
+  console.log(currentSlide);
+})
 
         // On before slide change
         $('.slickMobile').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+          if (page == 2 && nextSlide == 1) {
 
+            intro.goToStep(3).start();
+            start--;
+
+
+          }else if(page == 1){
+          //      intro.exit();
+          }
             if (currentSlide > nextSlide) {
                 page--;
             } else {
