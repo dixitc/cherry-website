@@ -719,3 +719,7 @@ ul.slick-dots {
 div.introjs-tooltipbuttons,.introjs-bullets {
   visibility: hidden;
 }
+
+.introjs-helperNumberLayer {
+  visibility: hidden;
+}

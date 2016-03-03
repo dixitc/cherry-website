@@ -131,7 +131,7 @@
         </div>
 </body>
 <script type="text/javascript" src="libs/jquery.min.js"></script>
-<script type="text/javascript" src="libs/intro/intro.min.js"></script>
+<script type="text/javascript" src="libs/intro/intro.js"></script>
 <script type="text/javascript" src="libs/slick/slick/slick.min.js"></script>
 <script type="text/javascript">
     var baloon = $('#scrollDownContainer');
@@ -144,6 +144,8 @@
             bottom: '-=15'
         }, 400, runIt);
     }
+
+
 
 
     window.requestAnimationFrame(runIt);
@@ -178,6 +180,17 @@
             arrows: true
 
         });
+
+      $(window).keydown(function (e) {
+        if (e.keyCode == 40) {
+          console.log(e.keyCode);
+          var e = jQuery.Event( "DOMMouseScroll",{delta: 950} );
+
+// trigger an artificial DOMMouseScroll event with delta -650
+jQuery(window ).trigger( e );
+
+        }
+      })
 
         window.onresize = function(event) {
             resizeDiv();

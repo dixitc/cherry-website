@@ -513,6 +513,7 @@ footer {
   margin: 0;
   padding: 0;
   border: 0;
+  height: 100%;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
@@ -712,6 +713,7 @@ div.introjs-tooltipbuttons,.introjs-bullets {
 .scroll-icon {
     position: absolute;
     left: 50%;
+	text-align: center;
     bottom: 30px;
     padding: 0 10px;
     -webkit-transform: translateX(-50%);
@@ -719,7 +721,7 @@ div.introjs-tooltipbuttons,.introjs-bullets {
 }
 
 .icon-up-open-big:after {
-    content: "a";
+
     font-size: 2.5em;
     display: block;
     -webkit-transform: rotateX(180deg);
@@ -727,4 +729,10 @@ div.introjs-tooltipbuttons,.introjs-bullets {
     color: black;
     -webkit-transition: color .3s;
     transition: color .3s;
+}
+
+
+.fp-tableCell {
+	text-align: center;
+	display: table-cell;
 }
