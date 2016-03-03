@@ -24,21 +24,21 @@
       </nav>
     </header>
     <div class="" id="fullpage">
-      <div class="section">
+      <div class="section" data-anchor="feature11">
         <div class="inner-scroll-feature" style="background:white">
           <p style="color:#4C4C4C">
             Collect photos and share with your family and friends. Cherry is here for all your photo needs.
           </p>
         </div>
 
-        <div class="scroll-icon">
+        <div class="scroll-icon" data-anchor="feature12">
           <p>Jump into the last slide</p>
           <a href="#fifthSection/1" class="icon-up-open-big">
             <img id="scrollDownElement" src="assets/images/scroll-down.png"></a>
         </div>
 
       </div >
-      <div class="section">
+      <div class="section" data-anchor="feature13">
 
         <div class="inner-scroll-feature" style="background:#3e3947">
           <p>
@@ -46,21 +46,21 @@
           </p>
         </div>
       </div>
-      <div class="section">
+      <div class="section" data-anchor="feature14">
         <div class="inner-scroll-feature" style="background:#745360">
           <p>
             Get all the photos you didn't take from your friends.
           </p>
         </div>
       </div>
-      <div class="section">
+      <div class="section" data-anchor="feature15">
         <div class="inner-scroll-feature" style="background:#3e3947">
           <p>
             preserve those special moments with your loved ones
           </p>
         </div>
       </div>
-      <div class="section">
+      <div class="section" data-anchor="feature16">
         <div class="inner-scroll-feature" style="background:#745360">
           <p>
             cherry is secure.
@@ -68,7 +68,7 @@
         </div>
       </div>
 
-      <div class="section" id="feature1">
+      <div class="section" data-anchor="feature1">
 
         <div class="slide">
           Slide 1
@@ -82,32 +82,16 @@
         <div class="slide">
           Slide 4
         </div>
-        <!--    <div class="outer">
-          <div class="middle">
-            <div class="inner">
-              <div class="feature-wrapper">
 
-                <div class="intro-feature intro1" data-step="1" data-intro="feature 1 is awesome" data-position="left"></div>
-                <div class="intro-feature intro2" data-step="2" data-intro="feature 2 is also awesome" data-position="right"></div>
-              </div>
-              <div class="feature-wrapper">
-
-                <div class="intro-feature intro3" data-step="3" data-intro="feature 3 is pretty cool" data-position="left"></div>
-                <div class="intro-feature intro4" data-step="4" data-intro="feature 4 is epic" data-position="right"></div>
-              </div>
-
-            </div>
-          </div>
-	  </div> -->
 
       </div>
-      <div class="section" id="feature2">
+      <div class="section" data-anchor="feature2">
         <div class="videoOverlay" id="brand"></div>
       </div>
-      <div class="section" id="feature3">
+      <div class="section" data-anchor="feature3">
         <div class="videoOverlay" id="brand"></div>
       </div>
-      <div class="section" id="feature4">
+      <div class="section" data-anchor="feature4">
         <div class="videoOverlay" id="brand">
           <div id="text"></div>
         </div>
@@ -136,55 +120,69 @@
         var position = 0;
         var page = 0;
         var start = 0;
-        var slideIndex = 1;
+        var myslideIndex = 0;
         var sliding = false;
         $('#fullpage').fullpage({
+			  anchors: ['feature11', 'feature12', 'feature13', 'feature14', 'feature15','feature16', 'feature1', 'feature2', 'feature3', 'feature4'],
           touchSensitivity: 15,
           lockAnchors: true,
-          anchors: [
-            'firstPage', 'secondPage'
-          ],
+		  scrollingSpeed: 700,
+
           keyboardScrolling: true,
           navigation: true,
+		  sectionSelector : '.section',
           slideSelector: '.slide',
           slidesNavigation: true,
           slidesNavPosition: 'bottom',
           verticalCentered: true,
-		   controlArrows: false,
+		  controlArrows: false,
           fitToSection: true,
           afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-            console.log('slide loaded ' + index + ' ' + slideAnchor + ' ' + slideIndex + ' ' + anchorLink);
+			  myslideIndex = slideIndex;
+           console.log('slide loaded ' + index + ' ' + slideIndex );
           },
           onLeave: function (index, nextIndex, direction) {
             var leavingSection = $(this);
 
-            console.log('index ' + index);
-			console.log(!sliding);
-            if (index == 6 && !sliding) {
-				console.log(slideIndex);
+			console.log(sliding);
+
+			console.log('direction '+direction +' '+' '+'index '+ index+ ' nextIndex '+nextIndex);
+            if (index == 6 && sliding) {
+				console.log(myslideIndex);
 				console.log(direction);
-              if (direction == 'down' && slideIndex < 4) {
-				//  alert('bah')
+              if (direction == 'down' && myslideIndex < 3) {
 
-                //sliding = true;
+
+
                 $.fn.fullpage.moveSlideRight();
-                slideIndex++;
-                return false;
+            //    slideIndex++;
+				return false;
 
-              } else if (direction == 'up' && slideIndex > 1) {
+			} else if (direction == 'up' && myslideIndex > 0) {
+				  console.log('slideIndex ' + myslideIndex);
 
             //    sliding = true;
                 $.fn.fullpage.moveSlideLeft();
-                slideIndex--;
-                return false;
+            //    slideIndex--;
+				return false;
+
 
               }
 
-            } else if (sliding) {
+		  }else if(index == 7 && direction == "up"){
 
-              return false;
+		  } else if (sliding) {
+
+
 
             }
+			if(nextIndex == 6 ){
+				sliding = true;
+
+			}
+
+
+
             /*    if (index == 1) {
               $('#fp-nav ul li a span, .fp-slidesNav ul li a span').css('background', 'white');
             } else if (index == 2 && nextIndex == 1) {
