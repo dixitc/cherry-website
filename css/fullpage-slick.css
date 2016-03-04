@@ -800,57 +800,85 @@ div.introjs-tooltipbuttons,.introjs-bullets {
 }
 
 .inner {
-    margin-left: auto;
+	margin-left: auto;
     margin-right: auto;
     height: 50%;
     margin-left: auto;
-margin-right: auto;
-height: 51%;
-width: 25%;
-background: rgba(0, 0, 0, 0.27);
-max-width: 250px;
-min-height: 400px;
+    margin-right: auto;
+    height: 51%;
+    background: url('../assets/images/cherry-screen-5.png');
+    max-width: 250px;
+    background-position: 0 0;
+    min-height: 400px;
+    background-size: cover;
 }
 
-#feat1 {
-
-    font-size: 20px;
-    color : #333;
-    position: absolute;
-    left: 15%;
-}
 
 
  .circle {
-     width: 30px;
-     height: 30px;
-     position: relative;
+	 width: 15px;
+     height: 15px;
+     position: relative;;;
      margin: 0px;
-     left: 30px;
+float: right;
      background: rgba(255,103,0,0.5);
      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7fff6700", endColorstr="#7fff6700")\9;
      border-radius: 50%;
      -webkit-transition: .8s all ease-out;
      transition: .8s all ease-out;
      filter: alpha(opacity=0)\9;
-     top: 24px;
+     top: 31px;
+	 margin: 0px;
+}
+
+.circle-1 {
+
+
+    top: 33px;
+
+
+
 }
 
  .border-line {
-     width: 194px;
+     width: 124px;
      border-top: 2px solid #ff6700;
-     position: relative;
+     position: relative;;
      top: 40px;
-     /* transform: rotate(90deg); */
+
      -webkit-transition: .8s all ease-out;
      transition: .8s all ease-out;
      filter: alpha(opacity=0)\9;
-     left: -152px;
+
+}
+
+.border-line-1 {
+
+	    float: right;
+}
+
+.info {
+	position: relative;
+	display: none;
+	height: 100px;
+	width: 500px;
+}
+
+.info-1 {
+
+	position: absolute;;
+	left: 20%;
+}
+
+.info-2 {
+
+	position: absolute;;
+	left: 20%;
 }
 
 
 .circle-text {
-    position: absolute;
+    position: relative;;
     bottom: -49px;
     font-size: 18px;
     color: #212121;
@@ -862,12 +890,130 @@ min-height: 400px;
     filter: alpha(opacity=0)\9;
 }
 
+
+.feat {
+
+	font-size: 20px;
+	position: relative;
+	float: left;
+	width: 300px;
+	height: 100px;
+	z-index: 1000;
+
+}
+#feat-1 {
+    left: 0px;
+    top: 0px;
+	text-align: right;
+}
+#feat-2 {
+
+}
+
+.feat-sml-text {
+	font-size: 14px;
+	padding: 5px;
+	text-align: right;
+}
+
+.feat-title-text {
+	text-align: center;
+	padding: 5px;
+	text-align: right;
+}
+
  .circle .sml-circle {
-    width: 18px;
-    height: 18px;
-    position: absolute;
-    left: 6px;
-    top: 6px;
-    background: #ff6700;
+	 width: 10px;
+     height: 10px;
+     position: relative;;
+     left: 2px;
+     top: 3px;
+     background: #ff6700;
+     border-radius: 50%;
+}
+
+.fp-slidesNav {
+    position: relative;
+    width: 200px;
+    z-index: 4;
+    /* left: 50%; */
+    opacity: 1;
+    margin: auto;
+}
+
+.fp-slidesNav ul {
+    margin: 0;
+    padding: 0;
+    /* bottom: 100px; */
+}
+
+.fp-slidesNav ul li {
+    display: block;
+    width: 50px;
+    height: 1px;
+    margin: 7px;
+    position: relative;
+}
+
+.fp-slidesNav ul li {
+    display: inline-block;
+    margin: 0px;
+}
+
+.fp-slidesNav ul li a {
+    display: block;
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.fp-slidesNav ul li a span {
     border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 4px;
+    width: 4px;
+    border: 0;
+    background: #3C4FFB;
+    /* left: 50%; */
+    /* top: 50%; */
+    margin: -2px 0 0 -2px;
+    height: 1px;
+    width: 50px;
+    margin: -6px 0 0 -6px;
+    border-radius: 0;
+    margin: 0px;
+    transition: all ease-in 0.3s;
+    /* -webkit-transition: all .1s ease-in-out; */
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    /* transition: all .1s ease-in-out; */
+}
+
+.fp-slidesNav ul li:hover a.active span {
+    height: 5px;
+    width: 50px;
+    margin: -6px 0 0 -6px;
+    border-radius: 0;
+    margin: 0px;
+    transition: all ease-in 0.3s;
+}
+
+ .fp-slidesNav ul li a.active span, .fp-slidesNav ul li:hover a.active span {
+   height: 5px;
+   width: 50px;
+   border-radius: 0;
+   margin: 0px;
+   /* margin: -6px 0 0 -6px; */
+   /* border-radius: 100%; */
+}
+.fp-slidesNav {
+	left: 49%;
+}
+
+.fp-slidesNav.bottom {
+	bottom: 150px;
 }

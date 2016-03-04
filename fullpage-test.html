@@ -70,53 +70,64 @@
       </div>
 
       <div class="section" data-anchor="feature1">
-          <div class="outer">
+        <div class="outer">
 
-              <div class="middle">
-                  <div id="feat1">asdfsd</div>
-                  <div class="inner test-mobile">
-                      <div class="feature-wrapper">
-                          <div class="border-line border-line-1">
+          <div class="middle">
+            <div class="inner test-mobile">
+              <div class="feature-wrapper">
+                <div class="info info-1">
 
-                          </div>
-                          <div class="circle circle-1">
-                              <div class="sml-circle"></div>
-                          </div>
-
-                          <div class="intro-feature intro1" data-step="1" data-intro="feature 1 is awesome" data-position="left">
-
-                          </div>
-                          <div class="intro-feature intro2" data-step="2" data-intro="feature 2 is also awesome" data-position="right">
-
-                          </div>
-                      </div>
-                      <div class="feature-wrapper">
-
-                          <div class="intro-feature intro3" data-step="3" data-intro="feature 3 is pretty cool" data-position="left">
-
-                          </div>
-                          <div class="intro-feature intro4" data-step="4" data-intro="feature 4 is epic" data-position="right">
-
-                          </div>
-                      </div>
-
+                  <div id="feat-1" class="feat" data-out-effect="fadeOut" data-in-effect="fadeIn">
+                    <p class="feat-title-text">
+                      Title
+                    </p>
+                    <p class="feat-sml-text">
+                      asdf asdf asdf asdf asdfasd f
+                    </p>
                   </div>
+                  <div class="circle circle-1">
+                    <div class="sml-circle"></div>
+                  </div>
+				  <div class="border-line border-line-1"></div>
+                </div>
+
+                <div class="intro-feature intro1" data-step="1" data-intro="feature 1 is awesome" data-position="left"></div>
+                <div class="intro-feature intro2" data-step="2" data-intro="feature 2 is also awesome" data-position="right"></div>
               </div>
+              <div class="feature-wrapper">
+                <div class="info info-2">
+
+                  <div id="feat-2" class="feat" data-out-effect="fadeOut" data-in-effect="fadeIn">
+                    <p class="feat-title-text">
+                      Create private albums with your friends and family
+                    </p>
+                    <p class="feat-sml-text">
+                     All the photos in your memories are privately available to members only.
+                    </p>
+                  </div>
+                  <div class="circle circle-1">
+                    <div class="sml-circle"></div>
+                  </div>
+				  <div class="border-line border-line-1"></div>
+                </div>
+                <div class="intro-feature intro3" data-step="3" data-intro="feature 3 is pretty cool" data-position="left"></div>
+                <div class="intro-feature intro4" data-step="4" data-intro="feature 4 is epic" data-position="right"></div>
+              </div>
+
+            </div>
           </div>
-
-        <div class="slide">
-          Slide 1
-        </div>
-        <div class="slide">
-          Slide 2
-        </div>
-        <div class="slide">
-          Slide 3
-        </div>
-        <div class="slide">
-          Slide 4
         </div>
 
+        <div class="slide">
+          <span class="cd-words-wrapper">
+            <b class="is-visible"></b>
+            <b></b>
+            <b></b>
+          </span>
+        </div>
+        <div class="slide"></div>
+        <div class="slide"></div>
+        <div class="slide"></div>
 
       </div>
       <div class="section" data-anchor="feature2">
@@ -133,6 +144,8 @@
       </div>
     </body>
     <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/lettering.min.js"></script>
+    <script type="text/javascript" src="libs/textillate.js"></script>
     <script type="text/javascript" src="libs/slick/slick/slick.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.js"></script>
     <script type="text/javascript" src="libs/intro/intro.min.js"></script>
@@ -153,79 +166,89 @@
       $(document).ready(function () {
         var position = 0;
         var page = 0;
-    //    var intro = introJs();
+        //    var intro = introJs();
         var start = 0;
         var myslideIndex = 0;
         var sliding = false;
         $('#fullpage').fullpage({
-			  anchors: ['feature11', 'feature12', 'feature13', 'feature14', 'feature15','feature16', 'feature1', 'feature2', 'feature3', 'feature4'],
+          anchors: [
+            'feature11',
+            'feature12',
+            'feature13',
+            'feature14',
+            'feature15',
+            'feature16',
+            'feature1',
+            'feature2',
+            'feature3',
+            'feature4'
+          ],
           touchSensitivity: 15,
           lockAnchors: true,
-		  scrollingSpeed: 700,
+          scrollingSpeed: 700,
 
           keyboardScrolling: true,
           navigation: true,
-		  sectionSelector : '.section',
+          sectionSelector: '.section',
           slideSelector: '.slide',
           slidesNavigation: true,
           slidesNavPosition: 'bottom',
           verticalCentered: true,
-		  controlArrows: false,
+          controlArrows: false,
           fitToSection: true,
 
           afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-			  myslideIndex = slideIndex;
-           console.log('slide loaded ' + index + ' ' + slideIndex );
+            myslideIndex = slideIndex;
+
           },
           onLeave: function (index, nextIndex, direction) {
             var leavingSection = $(this);
 
-			console.log(sliding);
-
-			console.log('direction '+direction +' '+' '+'index '+ index+ ' nextIndex '+nextIndex);
+            //console.log(sliding); console.log('direction '+direction +' '+' '+'index '+ index+ ' nextIndex '+nextIndex);
             if (index == 6 && sliding) {
-				console.log(myslideIndex);
-				console.log(direction);
-              if (direction == 'down' && myslideIndex < 3) {
-                  if(myslideIndex == 0){
 
-                      $('#feat1').addClass('animated bounceInUp');
-                  }else {
-                     $('#feat1').removeClass('animated bounceInUp');
-                  }
+              console.log('myslideIndex');
+              console.log(myslideIndex);
+              if (myslideIndex < 3 && direction == 'down') {
+                if (direction == 'down' && myslideIndex <= 3) {
 
-        //        intro.nextStep();
+                  if (myslideIndex == 1) {
+                    $('.info-2').hide('slow');
+                    $('.info-1').show('slow');
+                    //  $('#feat1').addClass('animated fadeInUp');
+				} else if (myslideIndex == 0) {
+                    $('.info-1').hide('slow');
+                    $('.info-2').show('slow');
+                  } else {}
+                }
+                //        intro.nextStep();
                 $.fn.fullpage.moveSlideRight();
-            //    slideIndex++;
-				return false;
+                //    slideIndex++;
+                return false;
 
-			} else if (direction == 'up' && myslideIndex > 0) {
-				  console.log('slideIndex ' + myslideIndex);
+              } else if (direction == 'up' && myslideIndex > 0) {
+                console.log('slideIndex ' + myslideIndex);
+				$.fn.fullpage.moveSlideLeft();
 
-            //    sliding = true;
-        //    intro.previousStep();
-                $.fn.fullpage.moveSlideLeft();
-            //    slideIndex--;
-				return false;
-
+                if (myslideIndex == 1) {
+                  $('.info-2').hide('slow');
+                  $('.info-1').show(500);
+                  //  $('#feat1').addClass('animated fadeInUp');
+                } else if (myslideIndex == 2) {
+                  $('.info-1').hide('slow');
+                  $('.info-2').show(500);
+                } else {}
+                //    sliding = true;    intro.previousStep();
+                //    slideIndex--;
+                return false;
 
               }
 
-		  }else if(index == 7 && direction == "up"){
-
-		  } else if (sliding) {
-
-
+            } else if (index == 7 && direction == "up") {} else if (sliding) {}
+            if (nextIndex == 6) {
+              sliding = true;
 
             }
-			if(nextIndex == 6 ){
-				sliding = true;
-
-			}
-
-
-
-
 
           }
         });
@@ -240,7 +263,6 @@
           arrows: true
 
         });
-
 
       });
     </script>
