@@ -736,3 +736,138 @@ div.introjs-tooltipbuttons,.introjs-bullets {
 	text-align: center;
 	display: table-cell;
 }
+
+.test-mobile {
+
+    top: 20%;
+    z-index: 100;
+    left: 25%;
+    background: rgba(0, 0, 0, 0.51);
+    border: solid #4242C3 10px;
+    border-top: solid #4242C3 60px;
+    border-bottom: solid #4242C3 40px;
+    border-color: firebrick;
+    height: 26.5em;
+    width: 15em;
+    box-sizing: initial;
+    border-radius: 23px;
+}
+
+
+.intro-feature {
+  display: inline-block;
+  width: 49%;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+.intro1 {
+  float: left;
+  background: transparent;
+}
+
+.intro2 {
+  background: transparent;
+}
+.intro3 {
+  background: transparent;
+}
+
+.intro4 {
+  background: transparent;
+}
+
+.feature-wrapper {
+  width: 100%;
+  height: 50%;
+  margin:auto;
+  display: block;
+}
+
+/*http://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers*/
+.outer {
+    display: table;
+    position: absolute;
+    height: 100%;
+    z-index: 10000;
+    width: 100%;
+}
+
+.middle {
+  height: 100%;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.inner {
+    margin-left: auto;
+    margin-right: auto;
+    height: 50%;
+    margin-left: auto;
+margin-right: auto;
+height: 51%;
+width: 25%;
+background: rgba(0, 0, 0, 0.27);
+max-width: 250px;
+min-height: 400px;
+}
+
+#feat1 {
+
+    font-size: 20px;
+    color : #333;
+    position: absolute;
+    left: 15%;
+}
+
+
+ .circle {
+     width: 30px;
+     height: 30px;
+     position: relative;
+     margin: 0px;
+     left: 30px;
+     background: rgba(255,103,0,0.5);
+     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7fff6700", endColorstr="#7fff6700")\9;
+     border-radius: 50%;
+     -webkit-transition: .8s all ease-out;
+     transition: .8s all ease-out;
+     filter: alpha(opacity=0)\9;
+     top: 24px;
+}
+
+ .border-line {
+     width: 194px;
+     border-top: 2px solid #ff6700;
+     position: relative;
+     top: 40px;
+     /* transform: rotate(90deg); */
+     -webkit-transition: .8s all ease-out;
+     transition: .8s all ease-out;
+     filter: alpha(opacity=0)\9;
+     left: -152px;
+}
+
+
+.circle-text {
+    position: absolute;
+    bottom: -49px;
+    font-size: 18px;
+    color: #212121;
+
+    text-align: center;
+    -webkit-transition: .8s all ease-out;
+    transition: .8s all ease-out;
+
+    filter: alpha(opacity=0)\9;
+}
+
+ .circle .sml-circle {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    left: 6px;
+    top: 6px;
+    background: #ff6700;
+    border-radius: 50%;
+}
