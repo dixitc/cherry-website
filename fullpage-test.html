@@ -83,7 +83,7 @@
           <div id="scene">
             <li class="layer" data-depth="0.40">
 
-              <div class="info info-1 animated fadeInUp">
+              <div class="info info-1 animated">
 
                 <div id="feat-1" class="feat" data-out-effect="fadeOut" data-in-effect="fadeIn">
                   <p class="feat-title-text">
@@ -107,7 +107,7 @@
         <div class="feature-wrapper">
           <div id="scene-2">
             <li class="layer" data-depth="0.40">
-              <div class="info info-2 animated fadeOutDown">
+              <div class="info info-2 animated">
 
                 <div id="feat-2" class="feat" data-out-effect="fadeOut" data-in-effect="fadeIn">
                   <p class="feat-title-text">
@@ -187,6 +187,8 @@
     var page = 0;
     //    var intro = introJs();
     var start = 0;
+      $('.info-1').addClass('fadeInUp');
+      $('.info-2').addClass('fadeOutDown');
     var myslideIndex = 0;
     var sliding = false;
     $('#fullpage').fullpage({
@@ -216,12 +218,16 @@
       fitToSection: true,
       afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
         //after slide loads
+        console.log('afterSlideLoad');
+        console.log(myslideIndex + ' <-- prev-myslideIndex -- currentSlideIndex --> ' + slideIndex);
+        myslideIndex = slideIndex;
       },
       afterLoad: function(anchorLink, index) {
         //after section loads
       },
       onLeave: function(index, nextIndex, direction) {
         //before section leaves
+        console.log('leaving ....');
         if (index == 6) {
 
           if (nextIndex != (index + 1) && nextIndex != (index - 1)) {
@@ -303,9 +309,7 @@
 
       },
       onSlideLeave: function(anchorLink, index, slideIndex, direction, nextSlideIndex) {
-        console.log('onSlideLeave');
-        console.log(myslideIndex + ' <-- prev-myslideIndex -- currentSlideIndex --> ' + nextSlideIndex);
-        myslideIndex = nextSlideIndex;
+
       }
 
       /*          afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
