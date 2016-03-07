@@ -27,7 +27,7 @@
   </header>
   <div class="" id="fullpage">
     <div class="section" data-anchor="feature11">
-      <div class="inner-scroll-feature" style="background:url('assets/images/teen.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+      <div class="inner-scroll-feature" style="background:url('assets/images/bg.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
         <div id="scene-prev" style="top:45%;">
           <li class="layer" data-depth="0.20">
 
@@ -269,11 +269,13 @@
 
               if (myslideIndex > 0) {
                 if (myslideIndex == 2) {
-                  $('.info-1').removeClass('fadeInUp');
-                  $('.info-1').addClass('fadeOutDown');
-                  $('.info-2').removeClass('fadeOutDown');
-                  $('.info-2').addClass('fadeInUp');
-                  $('.info-2').css('display', 'block')
+                  $('.info-1').removeClass('active');
+                //  $('.info-1').removeClass('fadeInUp');
+                //  $('.info-1').addClass('fadeOutDown');
+                //  $('.info-2').removeClass('fadeOutDown');
+                //  $('.info-2').addClass('fadeInUp');
+                  $('.info-2').css('display', 'block');
+                  $('.info-2').addClass('active');
                     //$('.info-2').hide(500);  $('#feat1').addClass('animated fadeInUp');
                 } else if (myslideIndex == 3) {
                   $('.info-2').removeClass('fadeInUp');
