@@ -44,15 +44,6 @@ header {
     color: black;
 }
 
-#headerTitle {
-    display: inline-block;
-    float: left;
-    height: 60px;
-    line-height: 60px;
-    vertical-align: middle;
-    margin-left: 20%;
-    font-size: 1.5em;
-}
 
 nav {
     height: 100%;
@@ -509,6 +500,33 @@ footer {
 
 /**/
 
+
+
+#header-content {
+	width: 80%;
+	height: 100%;
+	position: relative;
+	margin: auto;
+
+}
+
+
+.header-title {
+    display: inline-block;
+    float: left;
+    height: 100%;
+    line-height: 100%;
+    vertical-align: middle;
+
+	background: url('../assets/images/logo-black-01.svg');
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    background-size: 70%;
+	    width: 200px;
+	    height: 60px;
+}
+
+
 .inner-scroll-feature {
   margin: 0;
   padding: 0;
@@ -521,9 +539,11 @@ footer {
 }
 
 .inner-scroll-feature p {
-  font-size: 1.25rem;
+  font-size: 2em;
+  font-weight: 300;
     line-height: 2;
     position: absolute;
+	background: rgba(0, 0, 0, 0.57);
     left: 50%;
     top: 50%;
     color: white;
@@ -833,7 +853,7 @@ float: right;
 }
 
  .border-line {
-     width: 70px;
+     width: 85px;
      border-top: 2px solid #ff6700;
      position: relative;;
      top: 40px;
@@ -853,19 +873,24 @@ float: right;
 	position: absolute;
 	display: none;
 	height: 120px;
-	width: 460px;
+	width: 440px;
 }
 
 .info-1 {
+	display: block;
+
+	left: -175%;
+
+  -vendor-animation-duration: 1s;
 
 
-	left: -195%;
+
 }
 
 .info-2 {
+  -vendor-animation-duration: 0.2s;
 
-
-	left: -195%;
+	left: -175%;
 }
 
 
@@ -1009,5 +1034,6 @@ float: right;
 }
 
 .fp-slidesNav.bottom {
-	bottom: 150px;
+	position: absolute;
+	bottom: 40px;
 }

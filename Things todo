@@ -1,3 +1,14 @@
 build and Test entire site with scrollreveal.js
 
 build and test layout in fullpage.js (full screen scrolling library)
+built , tested.
+
+responsive :
+
+desktops :
+laptops scaled : scaled version of desktop
+landscape tablets : scaled version of desktop (    height: 350px;
+    width: 196px;)
+portrait tablets :
+portrait mobiles :
+landscape mobiles :
