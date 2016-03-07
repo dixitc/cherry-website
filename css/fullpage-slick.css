@@ -750,7 +750,7 @@ div.introjs-tooltipbuttons,.introjs-bullets {
 
     top: 20%;
     z-index: 100;
-    
+
     background: rgba(0, 0, 0, 0.51);
     border: solid #4242C3 10px;
     border-top: solid #4242C3 60px;
@@ -829,6 +829,7 @@ div.introjs-tooltipbuttons,.introjs-bullets {
 
 
  .circle {
+   opacity: inherit;
 	 width: 15px;
      height: 15px;
      position: relative;;;
@@ -854,6 +855,7 @@ float: right;
 }
 
  .border-line {
+   opacity: inherit;
      width: 85px;
      border-top: 2px solid #ff6700;
      position: relative;;
@@ -872,9 +874,17 @@ float: right;
 
 .info {
 	position: absolute;
+  transition: all 3s;
+  top:200px;
+  opacity:0;
 	display: none;
 	height: 120px;
 	width: 440px;
+}
+
+.active {
+  top: 0px;
+  opacity: 1;
 }
 
 .info-1 {
@@ -910,7 +920,7 @@ float: right;
 
 
 .feat {
-
+opacity: inherit;
 	font-size: 30px;
 	position: relative;
 	float: left;
@@ -943,6 +953,7 @@ float: right;
 }
 
  .circle .sml-circle {
+   opacity: inherit;
 	 width: 10px;
      height: 10px;
      position: relative;;

@@ -187,8 +187,8 @@
     var page = 0;
     //    var intro = introJs();
     var start = 0;
-      $('.info-1').addClass('fadeInUp');
-      $('.info-2').addClass('fadeOutDown');
+    $('.info-1').addClass('fadeInUp');
+    $('.info-2').addClass('fadeOutDown');
     var myslideIndex = 0;
     var sliding = false;
     $('#fullpage').fullpage({
@@ -252,8 +252,7 @@
                   $('.info-1').removeClass('fadeOutDown');
                   $('.info-1').addClass('fadeInUp');
                   //$('.info-2').css('display' , 'block')
-                }
-                else if (myslideIndex == 2) {
+                } else if (myslideIndex == 2) {
                   $('.info-1').removeClass('fadeInUp');
                   $('.info-1').addClass('fadeOutDown');
                   $('.info-2').removeClass('fadeOutDown');
@@ -298,6 +297,8 @@
 
         if (index < 6 && nextIndex == 6) {
           console.log('index < 5');
+          //$('.info-1').css('top','0px');
+          $('.info-1').addClass('active');
           //    myslideIndex == 0;
           $.fn.fullpage.moveTo(6, 0);
         } else if (index > 6 && nextIndex == 6) {
