@@ -190,7 +190,7 @@
             var page = 0;
             //    var intro = introJs();
             var start = 0;
-            var myslideIndex = 1;
+            var myslideIndex = 0;
             var sliding = false;
             $('#fullpage').fullpage({
                 anchors: [
@@ -220,20 +220,19 @@
                 fitToSection: true,
 
                 afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+                    myslideIndex = slideIndex;
 
-
-					console.log('myslideIndex');
-					console.log(myslideIndex);
                 },
                 onLeave: function (index, nextIndex, direction) {
                     var leavingSection = $(this);
-
+					console.log('index '+index+' nextIndex '+nextIndex);
+		
                     if (index == 6 && sliding) {
 
+                        console.log('myslideIndex');
+                        console.log(myslideIndex);
 
                         if (myslideIndex < 3 && direction == 'down') {
-							$.fn.fullpage.moveSlideRight();
-							myslideIndex++;
                             if (direction == 'down' && myslideIndex <= 3) {
 
                                 if (myslideIndex == 1) {
@@ -242,7 +241,7 @@
                                     $('.info-1').removeClass('fadeOutDown');
                                     $('.info-1').addClass('fadeInUp');
                                     //$('.info-2').hide(500);  $('#feat1').addClass('animated fadeInUp');
-                                } else if (myslideIndex == 2) {
+                                } else if (myslideIndex == 0) {
                                 //    $('.info-1').removeClass('fadeInUp');
                                 //    $('.info-1').addClass('fadeOutDown');
                                 //    $('.info-2').removeClass('fadeOutDown');
@@ -251,14 +250,13 @@
                                 } else {}
                             }
                             //        intro.nextStep();
-
+                            $.fn.fullpage.moveSlideRight();
                             //    slideIndex++;
                             return false;
 
                         } else if (direction == 'up' && myslideIndex > 0) {
 
                             $.fn.fullpage.moveSlideLeft();
-							myslideIndex--;
 
                             if (myslideIndex == 1) {
                                 $('.info-2').removeClass('fadeInUp');

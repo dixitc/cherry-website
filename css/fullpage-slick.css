@@ -910,7 +910,7 @@ float: right;
 
 .feat {
 
-	font-size: 20px;
+	font-size: 30px;
 	position: relative;
 	float: left;
 	width: 300px;
@@ -930,7 +930,7 @@ float: right;
 }
 
 .feat-sml-text {
-	font-size: 14px;
+	font-size: 16px;
 	padding: 5px;
 	text-align: right;
 }
