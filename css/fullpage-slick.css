@@ -655,17 +655,6 @@ color: black; opacity: 0.25;
     vertical-align: middle;
 }
 
-.inner {
-    margin-left: auto;
-    margin-right: auto;
-    height: 50%;
-    margin-left: auto;
-margin-right: auto;
-height: 50%;
-width: 47%;
-background: firebrick;
-max-width: 300px;
-}
 
 
 .dots-wrapper {
@@ -780,8 +769,10 @@ div.introjs-tooltipbuttons,.introjs-bullets {
 .feature-wrapper {
   width: 100%;
   height: 50%;
+  left: 0;
   margin:auto;
   display: block;
+  position: relative;
 }
 
 /*http://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers*/
@@ -805,12 +796,13 @@ div.introjs-tooltipbuttons,.introjs-bullets {
     height: 50%;
     margin-left: auto;
     margin-right: auto;
-    height: 51%;
+    height: 400px;
+    width: 220px;
     background: url('../assets/images/cherry-screen-5.png');
-    max-width: 250px;
+
     background-position: 0 0;
-    min-height: 400px;
-    background-size: cover;
+
+    background-size: contain;;
 }
 
 
@@ -824,8 +816,8 @@ float: right;
      background: rgba(255,103,0,0.5);
      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7fff6700", endColorstr="#7fff6700")\9;
      border-radius: 50%;
-     -webkit-transition: .8s all ease-out;
-     transition: .8s all ease-out;
+/*     -webkit-transition: .8s all ease-out;
+     transition: .8s all ease-out; */
      filter: alpha(opacity=0)\9;
      top: 31px;
 	 margin: 0px;
@@ -841,13 +833,13 @@ float: right;
 }
 
  .border-line {
-     width: 124px;
+     width: 70px;
      border-top: 2px solid #ff6700;
      position: relative;;
      top: 40px;
 
-     -webkit-transition: .8s all ease-out;
-     transition: .8s all ease-out;
+  /*   -webkit-transition: .8s all ease-out;
+     transition: .8s all ease-out; */
      filter: alpha(opacity=0)\9;
 
 }
@@ -858,22 +850,22 @@ float: right;
 }
 
 .info {
-	position: relative;
+	position: absolute;
 	display: none;
-	height: 100px;
-	width: 500px;
+	height: 120px;
+	width: 460px;
 }
 
 .info-1 {
 
-	position: absolute;;
-	left: 20%;
+
+	left: -195%;
 }
 
 .info-2 {
 
-	position: absolute;;
-	left: 20%;
+
+	left: -195%;
 }
 
 
@@ -884,8 +876,8 @@ float: right;
     color: #212121;
 
     text-align: center;
-    -webkit-transition: .8s all ease-out;
-    transition: .8s all ease-out;
+  /*  -webkit-transition: .8s all ease-out;
+    transition: .8s all ease-out; */
 
     filter: alpha(opacity=0)\9;
 }
@@ -907,7 +899,9 @@ float: right;
 	text-align: right;
 }
 #feat-2 {
-
+  left: 0px;
+  top: 0px;
+  text-align: right;
 }
 
 .feat-sml-text {

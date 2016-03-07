@@ -33,7 +33,7 @@
         </div>
 
         <div class="scroll-icon" data-anchor="feature12">
-          <p>Jump into the last slide</p>
+
           <a href="#fifthSection/1" class="icon-up-open-big">
             <img id="scrollDownElement" src="assets/images/scroll-down.png"></a>
         </div>
@@ -79,10 +79,10 @@
 
                   <div id="feat-1" class="feat" data-out-effect="fadeOut" data-in-effect="fadeIn">
                     <p class="feat-title-text">
-                      Title
+                      Title says something something.
                     </p>
                     <p class="feat-sml-text">
-                      asdf asdf asdf asdf asdfasd f
+                      Content elaborates on what title says in detail so the reader better understandards the particular details.
                     </p>
                   </div>
                   <div class="circle circle-1">
@@ -213,12 +213,12 @@
                 if (direction == 'down' && myslideIndex <= 3) {
 
                   if (myslideIndex == 1) {
-                    $('.info-2').hide('slow');
-                    $('.info-1').show('slow');
+                    $('.info-2').fadeOut(500);
+                    $('.info-1').fadeIn(500);
                     //  $('#feat1').addClass('animated fadeInUp');
 				} else if (myslideIndex == 0) {
-                    $('.info-1').hide('slow');
-                    $('.info-2').show('slow');
+                    $('.info-1').fadeOut(500);
+                    $('.info-2').fadeIn(500);
                   } else {}
                 }
                 //        intro.nextStep();
@@ -231,12 +231,12 @@
 				$.fn.fullpage.moveSlideLeft();
 
                 if (myslideIndex == 1) {
-                  $('.info-2').hide('slow');
-                  $('.info-1').show(500);
+                  $('.info-2').fadeOut(500);
+                  $('.info-1').fadeIn(500);
                   //  $('#feat1').addClass('animated fadeInUp');
                 } else if (myslideIndex == 2) {
-                  $('.info-1').hide('slow');
-                  $('.info-2').show(500);
+                  $('.info-1').fadeOut(500);
+                  $('.info-2').fadeIn(500);
                 } else {}
                 //    sliding = true;    intro.previousStep();
                 //    slideIndex--;
