@@ -100,9 +100,25 @@
               </div>
             </li>
           </div>
+          <div id="scene-3">
+            <li class="layer" data-depth="0.40">
+              <div class="info info-3 animated">
 
-          <div class="intro-feature intro1" data-step="1" data-intro="feature 1 is awesome" data-position="left"></div>
-          <div class="intro-feature intro2" data-step="2" data-intro="feature 2 is also awesome" data-position="right"></div>
+                <div id="feat-3" class="feat" data-out-effect="fadeOut" data-in-effect="fadeIn">
+                  <p class="feat-title-text-left">
+                    Create private albums with your friends and family
+                  </p>
+                  <p class="feat-sml-text-left">
+                    All the photos in your memories are privately available to members only.
+                  </p>
+                </div>
+                <div class="circle circle-3">
+                  <div class="sml-circle"></div>
+                </div>
+                <div class="border-line border-line-3"></div>
+              </div>
+            </li>
+          </div>
         </div>
         <div class="feature-wrapper">
           <div id="scene-2">
@@ -124,6 +140,28 @@
               </div>
             </li>
           </div>
+          <div id="scene-4">
+            <li class="layer" data-depth="0.40">
+              <div class="info info-4 animated">
+
+                <div id="feat-3" class="feat" data-out-effect="fadeOut" data-in-effect="fadeIn">
+                  <p class="feat-title-text-left">
+                    Create private albums with your friends and family
+                  </p>
+                  <p class="feat-sml-text-left">
+                    All the photos in your memories are privately available to members only.
+                  </p>
+                </div>
+                <div class="circle circle-3">
+                  <div class="sml-circle"></div>
+                </div>
+                <div class="border-line border-line-3"></div>
+              </div>
+            </li>
+          </div>
+
+          <div class="intro-feature intro1" data-step="1" data-intro="feature 1 is awesome" data-position="left"></div>
+          <div class="intro-feature intro2" data-step="2" data-intro="feature 2 is also awesome" data-position="right"></div>
           <div class="intro-feature intro3" data-step="3" data-intro="feature 3 is pretty cool" data-position="left"></div>
           <div class="intro-feature intro4" data-step="4" data-intro="feature 4 is epic" data-position="right"></div>
         </div>
@@ -249,15 +287,15 @@
                 } else if (myslideIndex == 1) {
                   $('.info-2').removeClass('fadeInUp');
                   $('.info-2').addClass('fadeOutDown');
-                  $('.info-1').removeClass('fadeOutDown');
-                  $('.info-1').addClass('fadeInUp');
-                  //$('.info-2').css('display' , 'block')
+                  $('.info-3').removeClass('fadeOutDown');
+                  $('.info-3').addClass('fadeInUp');
+                  $('.info-3').css('display' , 'block')
                 } else if (myslideIndex == 2) {
-                  $('.info-1').removeClass('fadeInUp');
-                  $('.info-1').addClass('fadeOutDown');
-                  $('.info-2').removeClass('fadeOutDown');
-                  $('.info-2').addClass('fadeInUp');
-                  $('.info-2').css('display', 'block')
+                  $('.info-3').removeClass('fadeInUp');
+                  $('.info-3').addClass('fadeOutDown');
+                  $('.info-4').removeClass('fadeOutDown');
+                  $('.info-4').addClass('fadeInUp');
+                  $('.info-4').css('display', 'block')
                 }
 
 
@@ -268,20 +306,17 @@
             } else if (direction == 'up') {
 
               if (myslideIndex > 0) {
-                if (myslideIndex == 2) {
-                  $('.info-1').removeClass('active');
-                //  $('.info-1').removeClass('fadeInUp');
-                //  $('.info-1').addClass('fadeOutDown');
-                //  $('.info-2').removeClass('fadeOutDown');
-                //  $('.info-2').addClass('fadeInUp');
-                  $('.info-2').css('display', 'block');
-                  $('.info-2').addClass('active');
-                    //$('.info-2').hide(500);  $('#feat1').addClass('animated fadeInUp');
-                } else if (myslideIndex == 3) {
-                  $('.info-2').removeClass('fadeInUp');
-                  $('.info-2').addClass('fadeOutDown');
-                  $('.info-1').removeClass('fadeOutDown');
-                  $('.info-1').addClass('fadeInUp');
+             if (myslideIndex == 3) {
+                  $('.info-4').removeClass('fadeInUp');
+                  $('.info-4').addClass('fadeOutDown');
+                  $('.info-3').removeClass('fadeOutDown');
+                  $('.info-3').addClass('fadeInUp');
+                  //$('.info-2').css('display' , 'block')
+              } else if (myslideIndex == 2) {
+                  $('.info-3').removeClass('fadeInUp');
+                  $('.info-3').addClass('fadeOutDown');
+                  $('.info-2').removeClass('fadeOutDown');
+                  $('.info-2').addClass('fadeInUp');
                   //$('.info-2').css('display' , 'block')
                 } else if (myslideIndex == 1) {
                   $('.info-2').removeClass('fadeInUp');

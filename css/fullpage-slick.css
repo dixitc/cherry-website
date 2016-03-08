@@ -834,7 +834,6 @@ div.introjs-tooltipbuttons,.introjs-bullets {
      height: 15px;
      position: relative;;;
      margin: 0px;
-float: right;
      background: rgba(255,103,0,0.5);
      filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#7fff6700", endColorstr="#7fff6700")\9;
      border-radius: 50%;
@@ -847,7 +846,17 @@ float: right;
 
 .circle-1 {
 
+    float: right;
 
+    top: 33px;
+
+
+
+}
+
+.circle-3 {
+
+    float: left;
     top: 33px;
 
 
@@ -872,10 +881,15 @@ float: right;
 	    float: right;
 }
 
+.border-line-3 {
+
+	    float: left;
+}
+
 .info {
 	position: absolute;
   transition: all 3s;
-  top:200px;
+  top:0px;
   opacity:0;
 	display: none;
 	height: 120px;
@@ -886,6 +900,16 @@ float: right;
   top: 0px;
   opacity: 1;
 }
+
+.info-3{
+    left: 70%;
+}
+
+.info-4{
+    left: 70%;
+}
+
+
 
 .info-1 {
 	display: block;
@@ -923,7 +947,6 @@ float: right;
 opacity: inherit;
 	font-size: 30px;
 	position: relative;
-	float: left;
 	width: 300px;
 	height: 100px;
 	z-index: 1000;
@@ -933,12 +956,29 @@ opacity: inherit;
     left: 0px;
     top: 0px;
 	text-align: right;
+    float: left;
 }
 #feat-2 {
   left: 0px;
   top: 0px;
   text-align: right;
+      float: left;
 }
+#feat-3 {
+    text-align: left;
+    right: 0px;
+    top: 0px;
+        float: right;
+}
+
+#feat-4 {
+    text-align: left;
+    right: 0px;
+    top: 0px;
+        float: right;
+}
+
+
 
 .feat-sml-text {
 	font-size: 16px;
@@ -950,6 +990,19 @@ opacity: inherit;
 	text-align: center;
 	padding: 5px;
 	text-align: right;
+}
+
+
+.feat-sml-text-left {
+	font-size: 16px;
+	padding: 5px;
+	text-align: left;;
+}
+
+.feat-title-text-left {
+	text-align: center;
+	padding: 5px;
+	text-align: left;
 }
 
  .circle .sml-circle {
