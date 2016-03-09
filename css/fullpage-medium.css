@@ -1,0 +1,28 @@
+.feat {
+	font-size: 23px;
+}
+.feat-sml-text , .feat-sml-text-left {
+	font-size: 14px;
+}
+
+
+.inner {
+	height: 350px;
+	width: 195px;
+}
+
+
+
+@media (orientation: landscape) {
+	.test-mobile {
+		top : 10%;
+	}
+.fp-slidesNav.bottom {
+		bottom: 20px;
+		margin-left: -130px;
+	}
+
+	.info-2,.info-1 {
+		left: -210%;
+	}
+}

@@ -1102,3 +1102,48 @@ opacity: inherit;
 	position: absolute;
 	bottom: 100px;
 }
+
+
+
+
+@media (min-width : 1000px){
+	@media (max-height : 800px){
+		.fp-slidesNav.bottom {
+			bottom: 50px;
+		}
+	}
+}
+
+
+
+@media (max-width : 1000px){
+	.feat {
+		font-size: 23px;
+	}
+	.feat-sml-text , .feat-sml-text-left {
+		font-size: 14px;
+	}
+
+
+	.inner {
+		height: 350px;
+		width: 195px;
+	}
+
+
+
+	@media (orientation: landscape) {
+		.test-mobile {
+			top : 10%;
+		}
+	.fp-slidesNav.bottom {
+			bottom: 20px;
+			margin-left: -130px;
+		}
+
+		.info-2,.info-1 {
+			left: -210%;
+		}
+	}
+
+}

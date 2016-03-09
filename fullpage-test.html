@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="libs/animate.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/fullpage-slick.css">
+  <link rel="stylesheet" media="(max-width:1000px)" href="css/fullpage-medium.css">
 </head>
 
 <body>
@@ -257,6 +258,7 @@
       afterSlideLoad: function(anchorLink, index, slideAnchor, slideIndex) {
         //after slide loads
         console.log('afterSlideLoad');
+		sliding = false;
         console.log(myslideIndex + ' <-- prev-myslideIndex -- currentSlideIndex --> ' + slideIndex);
         myslideIndex = slideIndex;
       },
@@ -266,6 +268,9 @@
       onLeave: function(index, nextIndex, direction) {
         //before section leaves
         console.log('leaving ....');
+		if(sliding){
+			return false;
+		}
         if (index == 6) {
 
           if (nextIndex != (index + 1) && nextIndex != (index - 1)) {
@@ -298,7 +303,7 @@
                   $('.info-4').css('display', 'block')
                 }
 
-
+				sliding = true;
                 $.fn.fullpage.moveSlideRight();
                 //myslideIndex++;
                 return false;
@@ -324,6 +329,7 @@
                   $('.info-1').removeClass('fadeOutDown');
                   $('.info-1').addClass('fadeInUp');
                 }
+				sliding = true;
                 $.fn.fullpage.moveSlideLeft();
                 //myslideIndex --;
                 return false;
@@ -332,17 +338,7 @@
           }
         }
 
-        if (index < 6 && nextIndex == 6) {
-          console.log('index < 5');
-          //$('.info-1').css('top','0px');
-          $('.info-1').addClass('active');
-          //    myslideIndex == 0;
-          $.fn.fullpage.moveTo(6, 0);
-        } else if (index > 6 && nextIndex == 6) {
-          console.log('index > 6');
-          $.fn.fullpage.moveTo(6, 3);
-          myslideIndex == 3;
-        }
+
 
 
       },
