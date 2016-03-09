@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" href="libs/animate.css" media="screen" title="no title" charset="utf-8">
   <link rel="stylesheet" type="text/css" href="css/fullpage-slick.css">
-  <link rel="stylesheet" media="(max-width:1000px)" href="css/fullpage-medium.css">
+
 </head>
 
 <body>
@@ -20,7 +20,13 @@
     <nav>
       <div id="header-content">
         <div class="header-title"></div>
-        <span></span>
+
+<a href="https://play.google.com/store/apps/details?id=com.triconlabs.cherry&hl=en" target="_blank" class="app-anchor">
+	<img src="assets/images/google-play.png" alt="" />
+</a>
+<a href="https://itunes.apple.com/us/app/cherry-cherish-your-memories/id924848929?mt=8" target="_blank" class="app-anchor app-store">
+<img src="assets/images/ios-app-store.png" alt="" />
+</a>
 
       </div>
 
@@ -28,7 +34,7 @@
   </header>
   <div class="" id="fullpage">
     <div class="section" data-anchor="feature11">
-      <div class="inner-scroll-feature" style="background:url('assets/images/bg.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+      <div class="inner-scroll-feature" style="background:url('assets/images/teen.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
         <div id="scene-prev" style="top:45%;">
           <li class="layer" data-depth="0.20">
 
@@ -48,7 +54,7 @@
     </div>
     <div class="section" data-anchor="feature13">
 
-      <div class="inner-scroll-feature" style="background:url('assets/images/1.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+      <div class="inner-scroll-feature" style="background:url('assets/images/teen.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
         <p>
           Collect photos and share with your family and friends.
         </p>
@@ -88,7 +94,7 @@
 
                 <div id="feat-1" class="feat" data-out-effect="fadeOut" data-in-effect="fadeIn">
                   <p class="feat-title-text">
-                    Title says something something.
+                    Title makes a statement.
                   </p>
                   <p class="feat-sml-text">
                     Content elaborates on what title says in detail so the reader better understandards the particular details.
@@ -195,6 +201,17 @@
       </div>
 
     </div>
+	<footer id="footer-section">
+		<div class="footer-content">
+			  <p class="footer-company-title"><a href="http://www.triconinfotech.com/"> A Tricon Infotech product</a></p>
+			  <ul class="social-list">
+				  <li class="social-icons"></li>
+				  <li class="social-icons"></li>
+				  <li class="social-icons"></li>
+			  </ul>
+
+		</div>
+	</footer>
 </body>
 <script type="text/javascript" src="libs/jquery.min.js"></script>
 <script type="text/javascript" src="libs/lettering.min.js"></script>
@@ -248,10 +265,12 @@
       scrollingSpeed: 700,
       keyboardScrolling: true,
       navigation: true,
+	  fixedElements : '#footer-section',
       sectionSelector: '.section',
       slideSelector: '.slide',
       slidesNavigation: true,
       slidesNavPosition: 'bottom',
+
       verticalCentered: true,
       controlArrows: false,
       fitToSection: true,
