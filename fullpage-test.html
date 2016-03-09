@@ -54,8 +54,8 @@
         </div>
         <div class="section" data-anchor="feature13">
 
-            <div class="inner-scroll-feature" style="background:url('assets/images/teen.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
-                <p>
+            <div class="inner-scroll-feature" style="background:url('assets/images/2.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+                <p style="opacity:0">
                     Collect photos and share with your family and friends.
                 </p>
             </div>
@@ -187,7 +187,8 @@
 
         </div>
         <div class="section" data-anchor="feature2">
-            <div class="videoOverlay" id="brand"></div>
+            <span class="integers count">5345</span>
+
         </div>
         <div class="section" data-anchor="feature3">
             <div class="videoOverlay" id="brand"></div>
@@ -220,6 +221,7 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.js"></script>
     <script type="text/javascript" src="libs/intro/intro.min.js"></script>
     <script type="text/javascript" src="libs/jquery.parallax.min.js"></script>
+
     <script type="text/javascript"></script>
     <script type="text/javascript">
         var baloon = $('#scrollDownContainer');
@@ -283,9 +285,24 @@
                 },
                 afterLoad: function (anchorLink, index) {
                     //after section loads
+                    if (index == 7) {
+
+                        $('.count').each(function () {
+                            $(this).prop('Counter', 0).animate({
+                                Counter: $(this).text()
+                            }, {
+                                duration: 2000,
+                                easing: 'swing',
+                                step: function (now) {
+                                    $(this).text(Math.ceil(now));
+                                }
+                            });
+                        });
+                    }
                 },
                 onLeave: function (index, nextIndex, direction) {
                     //before section leaves
+
                     console.log('leaving ....');
                     if (sliding) {
                         return false;
@@ -361,7 +378,6 @@
                 onSlideLeave: function (anchorLink, index, slideIndex, direction, nextSlideIndex) {}
 
             });
-
 
         });
     </script>
