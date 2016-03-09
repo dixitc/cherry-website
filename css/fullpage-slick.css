@@ -1110,6 +1110,9 @@ div.introjs-tooltipbuttons, .introjs-bullets {
     #header-content {
         width: 96%;
     }
+	#fp-nav.right {
+		right: 10px;
+	}
 	.inner-scroll-feature p {
 		font-size: 20px;
 	}
