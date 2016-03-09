@@ -635,6 +635,7 @@ div.introjs-tooltipbuttons, .introjs-bullets {
 .scroll-icon {
     position: absolute;
     left: 50%;
+    cursor: pointer;
     text-align: center;
     bottom: 30px;
     padding: 0 10px;
@@ -732,7 +733,7 @@ div.introjs-tooltipbuttons, .introjs-bullets {
     ;
     ;
     margin: 0px;
-    background: rgba(255, 103, 0, 0.5);
+    background: rgba(255, 103, 0, 0);
     filter: progid: DXImageTransform.Microsoft.gradient(startColorstr="#7fff6700", endColorstr="#7fff6700")\9;
     border-radius: 50%;
     /*     -webkit-transition: .8s all ease-out;
@@ -863,8 +864,19 @@ div.introjs-tooltipbuttons, .introjs-bullets {
     width: 10px;
     height: 10px;
     position: relative;
-    ;
-    left: 2px;
+
+    left: 0px;
+    top: 3px;
+    background: #ff6700;
+    border-radius: 50%;
+}
+.circle .sml-circle-left {
+    opacity: inherit;
+    width: 10px;
+    height: 10px;
+    position: relative;
+
+    left: 5px;
     top: 3px;
     background: #ff6700;
     border-radius: 50%;
@@ -957,7 +969,7 @@ div.introjs-tooltipbuttons, .introjs-bullets {
     position: relative;
     transition-property: background-color;
     transition-duration: 400ms;
-    margin-top: 15px;
+    margin-top: 7px;
     margin-right: 10px;
 }
 .app-anchor img {
@@ -985,12 +997,11 @@ div.introjs-tooltipbuttons, .introjs-bullets {
     line-height: 50px;
     font-weight: 600;
 }
-.footer-company-title a{
-	text-decoration: none;
-	outline: none;
-	color: #336;
+.footer-company-title a {
+    text-decoration: none;
+    outline: none;
+    color: #fff;
 }
-
 .company-link {
     float: left;
     color: white;
@@ -1007,14 +1018,32 @@ div.introjs-tooltipbuttons, .introjs-bullets {
 }
 .social-list {
     float: right;
-    width: 200px;
+    width: 50%;
+    text-align: right;
+    padding: 0px;
 }
 .social-icons {
     display: inline-block;
     height: 10px;
     width: 10px;
-    background: red;
+    background: white;
     margin-right: 10px;
+}
+.social-extra {
+    display: inline-block;
+    font-size: 12px;
+    height: 100%;
+    color: #fff;
+    margin-right: 10px;
+}
+#it-works {
+    top: 100px;
+    text-align: center;
+    font-size: 50px;
+    position: relative;
+    width: 100%;
+    margin: auto;
+    font-weight: 300;
 }
 .store-image {
     height: 80%;
@@ -1032,19 +1061,22 @@ div.introjs-tooltipbuttons, .introjs-bullets {
     .header-title {
         width: 150px;
     }
-	.app-anchor {
-		float: right;
-		text-align: left;
-		width: 130px;
-		height: 45px;
-		background-color: transparent display: inline-block;
-		border-radius: 5px;
-		position: relative;
-		transition-property: background-color;
-		transition-duration: 400ms;
-		margin-top: 15px;
-		margin-right: 10px;
-	}
+    .social-extra {
+        display: none;
+    }
+    .app-anchor {
+        float: right;
+        text-align: left;
+        width: 130px;
+        height: 45px;
+        background-color: transparent display: inline-block;
+        border-radius: 5px;
+        position: relative;
+        transition-property: background-color;
+        transition-duration: 400ms;
+        margin-top: 7px;
+        margin-right: 10px;
+    }
     .feat {
         font-size: 23px;
     }
@@ -1075,29 +1107,61 @@ div.introjs-tooltipbuttons, .introjs-bullets {
     }
 }
 @media (max-width:600px) {
-	#header-content {
-		width: 96%;
+    #header-content {
+        width: 96%;
+    }
+	.inner-scroll-feature p {
+		font-size: 20px;
 	}
     .header-title {
         width: 120px;
     }
-	.app-anchor {
-	    float: right;
-	    text-align: left;
-	    width: 70px;
-	    height: 35px;
-	    background-color: transparent display: inline-block;
-	    border-radius: 5px;
-	    position: relative;
-	    transition-property: background-color;
-	    transition-duration: 400ms;
-	    margin-top: 15px;
-	    margin-right: 10px;
+	#it-works {
+		font-size: 20px;
+		position: absolute;
+		top:70px;
 	}
-
+	footer {
+		height: 30px;
+	}
+	.footer-company-title {
+		line-height: 30px;
+		font-size: 10px;
+	}
+	.social-list {
+		height: 30px;
+		line-height: 30px;
+		margin: 0px;
+	}
+	.inner {
+    height: 280px;
+    width: 160px;
+}
+.fp-slidesNav.bottom {
+	position: absolute;
+	bottom: 50px;
 }
 
-
+    .footer-content {
+        width: 96%;
+    }
+    .social-list {
+        width: 100px;
+    }
+    .app-anchor {
+        float: right;
+        text-align: left;
+        width: 70px;
+        height: 35px;
+        background-color: transparent display: inline-block;
+        border-radius: 5px;
+        position: relative;
+        transition-property: background-color;
+        transition-duration: 400ms;
+        margin-top: 7px;
+        margin-right: 10px;
+    }
+}
 .count {
-	font-size: 40px;
+    font-size: 40px;
 }

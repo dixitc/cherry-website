@@ -33,13 +33,13 @@
             </nav>
         </header>
         <div class="" id="fullpage">
-            <div class="section" data-anchor="feature11">
-                <div class="inner-scroll-feature" style="background:url('assets/images/teen.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+            <div class="section" data-anchor="feature11" style="background:url('assets/images/testbg.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+                <div class="inner-scroll-feature" >
                     <div id="scene-prev" style="top:45%;">
                     <li class="layer" data-depth="0.20">
 
                         <p style="color:#FFF">
-                            Collect photos and share with your family and friends. Cherry is here for all your photo needs.
+                            <b>Collect</b> photos and share with your family and friends. Cherry is here for all your photo needs.
                         </p>
                     </li>
                 </div>
@@ -47,43 +47,43 @@
 
             <div class="scroll-icon" data-anchor="feature12">
 
-                <a href="#fifthSection/1" class="icon-up-open-big">
-                    <img id="scrollDownElement" src="assets/images/scroll-down.png"></a>
+
+                    <img id="scrollDownElement" src="assets/images/scroll-down.png">
             </div>
 
         </div>
-        <div class="section" data-anchor="feature13">
+        <div class="section" data-anchor="feature13" style="background:url('assets/images/testbg.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
 
-            <div class="inner-scroll-feature" style="background:url('assets/images/2.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
-                <p style="opacity:0">
-                    Collect photos and share with your family and friends.
+            <div class="inner-scroll-feature" >
+                <p >
+                    <b>Collect</b> photos and share with your family and friends.
                 </p>
             </div>
         </div>
-        <div class="section" data-anchor="feature14">
-            <div class="inner-scroll-feature" style="background:url('assets/images/teen.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+        <div class="section" data-anchor="feature14" style="background:url('assets/images/teen.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+            <div class="inner-scroll-feature" >
                 <p>
                     Get all the photos you didn't take from your friends.
                 </p>
             </div>
         </div>
-        <div class="section" data-anchor="feature15">
-            <div class="inner-scroll-feature" style="background:url('assets/images/teen.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+        <div class="section" data-anchor="feature15" style="background:url('assets/images/teen.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+            <div class="inner-scroll-feature" >
                 <p>
-                    preserve those special moments with your loved ones
+                    <b>preserve</b> those special moments with your loved ones
                 </p>
             </div>
         </div>
         <div class="section" data-anchor="feature16">
-            <div class="inner-scroll-feature" style="background:#745360">
+            <div class="inner-scroll-feature" style="background:#4150BB">
                 <p>
-                    cherry is secure.
+                    <b>cherry</b> is secure.
                 </p>
             </div>
         </div>
 
         <div class="section" data-anchor="feature1">
-
+			<h2 id="it-works">How it works</h2>
             <div class="inner test-mobile">
                 <div class="feature-wrapper">
                     <div id="scene">
@@ -115,11 +115,11 @@
                                         Create private albums with your friends and family
                                     </p>
                                     <p class="feat-sml-text-left">
-                                        All the photos in your memories are privately available to members only.
+                                        All the photos in your memories are privately available to members only.Check suggestions for smartly grouped photos.
                                     </p>
                                 </div>
                                 <div class="circle circle-3">
-                                    <div class="sml-circle"></div>
+                                    <div class="sml-circle-left"></div>
                                 </div>
                                 <div class="border-line border-line-3"></div>
                             </div>
@@ -159,7 +159,7 @@
                                     </p>
                                 </div>
                                 <div class="circle circle-3">
-                                    <div class="sml-circle"></div>
+                                    <div class="sml-circle-left"></div>
                                 </div>
                                 <div class="border-line border-line-3"></div>
                             </div>
@@ -191,11 +191,15 @@
 
         </div>
         <div class="section" data-anchor="feature3">
-            <div class="videoOverlay" id="brand"></div>
+            <p>
+            	MORE INFOGRAPHICS
+            </p>
         </div>
         <div class="section" data-anchor="feature4">
-            <div class="videoOverlay" id="brand">
-                <div id="text"></div>
+
+            <p>
+            	FEEDBACK PAGE
+            </p>
             </div>
 
         </div>
@@ -206,7 +210,10 @@
                         A Tricon Infotech product</a>
                 </p>
                 <ul class="social-list">
-                    <li class="social-icons"></li>
+					<li class="social-extra">Contact Us </li>
+                    <li class="social-extra">Terms of Use</li>
+					<li class="social-extra">Privacy policy</li>
+                    <li class="social-icons"> </li>
                     <li class="social-icons"></li>
                     <li class="social-icons"></li>
                 </ul>
@@ -224,7 +231,7 @@
 
     <script type="text/javascript"></script>
     <script type="text/javascript">
-        var baloon = $('#scrollDownContainer');
+        var baloon = $('.scroll-icon');
 
         function runIt() {
             baloon.animate({
@@ -249,6 +256,9 @@
             $('.info-2').addClass('fadeOutDown');
             var myslideIndex = 0;
             var sliding = false;
+			$('.scroll-icon').click(function () {
+				$.fn.fullpage.moveSectionDown();
+			})
             $('#fullpage').fullpage({
                 anchors: [
                     'feature11',
