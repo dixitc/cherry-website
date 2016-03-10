@@ -12,3 +12,16 @@ landscape tablets : scaled version of desktop (    height: 350px;
 portrait tablets :
 portrait mobiles :
 landscape mobiles :
+
+
+
+Manish suggestions :
+vertical middle align header elements. done to an extent . waiting on assets .
+get modified phone image and implement. waiting on assets .just drag and drop .
+mobile version of mobile-feature section . waiting on designs ,will star experimenting on my own.
+sidenav animation. in-progress .
+get memories moments and members numbers. ask shailesh.
+fix normal scrolling on feedback and infographic screen. in-progress .
+refine responsive breakpoints : todo.
+
+font:roboto-slab bold 24px
