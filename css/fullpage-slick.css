@@ -5,7 +5,7 @@ html, body {
     padding: 0px;
 }
 * {
-	list-style-type: none;
+    list-style-type: none;
 }
 p {
     margin: 0px;
@@ -42,7 +42,6 @@ header {
 nav {
     height: 100%;
 }
-
 .downloadImg {
     max-height: 50px;
 }
@@ -53,19 +52,13 @@ nav {
     /*width: 60%;
     margin: auto;*/
 }
-
-
 #text {
     padding-top: 20px;
     /*margin-left: 330px;*/
     position: absolute;
     left: calc(25% + 350px);
 }
-
-
-
-.
-#detail {
+. #detail {
     margin-top: 30px;
 }
 .detailText {
@@ -73,7 +66,6 @@ nav {
     line-height: 2em;
     font-weight: 200;
 }
-
 #scrollDownContainer {
     z-index: 20;
     position: fixed;
@@ -85,42 +77,37 @@ nav {
     height: 2em;
     background-color: transparent;
 }
-
 section {
     height: 100%;
     width: 100%;
 }
-
-
 .feature-wrapper {
     width: 100%;
     height: 50%;
     display: block;
     position: relative;
-
 }
-
 .mobile-section {
-	height: 80%;
+    height: 80%;
     width: 80%;
     position: relative;
     max-width: 760px;
-	display: table;
+    display: table;
     margin: auto;
-	top:10%;
+    top: 10%;
 }
 .mobile {
     width: 50%;
     margin: auto;
-	display: table-cell;
-	vertical-align: middle;
+    display: table-cell;
+    vertical-align: middle;
 }
 .iphone {
     background: url(../assets/images/iphone-other.png) no-repeat;
     max-width: 380px;
     min-height: 640px;
-	height: 640px;
-	margin: auto;
+    height: 640px;
+    margin: auto;
     background-size: 100%;
 }
 footer {
@@ -141,7 +128,6 @@ footer {
 .sectionScroller {
     height: calc(100% - 2px);
 }
-
 #header-content {
     width: 80%;
     height: 60px;
@@ -192,14 +178,11 @@ footer {
     max-width: 768px;
     text-align: center;
 }
-.
-#main-container {
+. #main-container {
     height: 100%;
 }
 
-
 /*http://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers*/
-
 
 .dots-wrapper {
     position: absolute;
@@ -225,7 +208,6 @@ ul.slick-dots {
     background: firebrick;
     z-index: 100000000;
 }
-
 .scroll-icon {
     position: absolute;
     left: 50%;
@@ -249,7 +231,6 @@ ul.slick-dots {
     text-align: center;
     display: table-cell;
 }
-
 
 /*http://stackoverflow.com/questions/396145/how-to-vertically-center-a-div-for-all-browsers*/
 
@@ -324,7 +305,7 @@ ul.slick-dots {
 .info {
     position: absolute;
     transition: all 3s;
-    top: 0px;
+    top: 100px;
     opacity: 0;
     display: none;
     height: 120px;
@@ -531,6 +512,11 @@ ul.slick-dots {
     height: 100%;
     width: 100%;
     object-fit: contain;
+	transition: all ease-out 0.3s;
+}
+
+.app-anchor img:hover {
+transform: scale(1.2);
 }
 .app-link {
     width: 150px;
@@ -608,8 +594,6 @@ ul.slick-dots {
     background: yellow;
     display: table-cell;
 }
-
-
 @media (min-width: 1000px) {
     @media (max-height: 800px) {
         .fp-slidesNav.bottom {
@@ -639,7 +623,6 @@ ul.slick-dots {
     .feat-sml-text, .feat-sml-text-left {
         font-size: 14px;
     }
-
     .inner {
         height: 320px;
         width: 175px;
@@ -652,7 +635,6 @@ ul.slick-dots {
             bottom: 30px;
             margin-left: -130px;
         }
-
     }
 }
 @media (max-width:600px) {
