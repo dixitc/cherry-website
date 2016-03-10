@@ -97,7 +97,7 @@ section {
     height: 50%;
     display: block;
     position: relative;
-	background: rgba(255, 0, 0, 0.15);
+
 }
 
 .mobile-section {
@@ -342,12 +342,12 @@ ul.slick-dots {
 }
 .info-1 {
     display: block;
-    left: -175%;
+    left: -85%;
     -vendor-animation-duration: 1s;
 }
 .info-2 {
     -vendor-animation-duration: 0.2s;
-    left: -175%;
+    left: -85%;
 }
 .circle-text {
     position: relative;
@@ -639,12 +639,7 @@ ul.slick-dots {
     .feat-sml-text, .feat-sml-text-left {
         font-size: 14px;
     }
-    .info {
-        width: 400px;
-    }
-    .info-1, .info-2 {
-        left: -195%;
-    }
+
     .inner {
         height: 320px;
         width: 175px;
@@ -657,9 +652,7 @@ ul.slick-dots {
             bottom: 30px;
             margin-left: -130px;
         }
-        .info-2, .info-1 {
-            left: -195%;
-        }
+
     }
 }
 @media (max-width:600px) {
