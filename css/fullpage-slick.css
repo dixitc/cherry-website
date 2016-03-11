@@ -38,6 +38,7 @@ header {
     width: 100%;
     top: 0;
     color: black;
+	padding : 10px;
 }
 nav {
     height: 100%;
@@ -74,8 +75,10 @@ nav {
 }
 #scrollDownElement {
     position: relative;
-    height: 2em;
+    height: 30px;
     background-color: transparent;
+
+transition: all ease-in 0.6s;
 }
 section {
     height: 100%;
@@ -288,7 +291,7 @@ ul.slick-dots {
 .border-line {
     opacity: inherit;
     width: 85px;
-    border-top: 2px solid #ff6700;
+    border-top: 1px solid #ff6700;
     position: relative;
     ;
     top: 40px;
@@ -591,28 +594,54 @@ ul.slick-dots {
 }
 .center {
     width: 400px;
+
     height: 20px;
     position: relative;
     margin: auto;
 }
 .custom-nav-horizontal {
     width: 100%;
-    z-index: 1000000 margin: auto;
+    z-index: 1000000 ;
+	margin: auto;
     position: relative;
     height: 20px;
     bottom: 0px;
 }
+.fp-tableCell {
+	background: rgba(0, 0, 0, 0.5);
+	height: 400px;
+}
+.fp-slides {
+	display: none;
+	height: 400px;
+	background: red
+}
+.central {
+	opacity: 0;
+	font-size: 25px;
+	color:#fff;
+	transition: all ease-out 0.6s;
+	transition-delay: 0.4s;
+	font-size: 2em;
+font-weight: 300;
+line-height: 2;
+}
+.active .central {
+
+opacity: 1;
+}
+
 .bar {
     margin: 0;
     border: none;
     padding: 0;
     height: 1px;
-    background: #002FFF;
+    background: #3C3CFD;
     width: 100%;
     display: inline-block;
 }
 .bar-slider {
-    background: #002FFF;
+    background: #3C3CFD;
     height: 10px;
     position: relative;
     width: 24%;

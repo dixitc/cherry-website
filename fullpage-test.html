@@ -51,44 +51,40 @@
                 </div>
             </div>
 
-            <div class="scroll-icon" data-anchor="feature12">
-
-                <img id="scrollDownElement" src="assets/images/scroll-down.png">
-            </div>
 
         </div>
         <div class="section" data-anchor="feature13" style="background:url('assets/images/1-03.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
 
-            <div class="inner-scroll-feature">
-                <p >
+
+                <p class="central">
                     <b>preserve</b>
                     those special moments with your family and loved ones.
                 </p>
-            </div>
+
         </div>
         <div class="section" data-anchor="feature14" style="background:url('assets/images/1-01.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
-            <div class="inner-scroll-feature">
-                <p>
+
+                <p class="central">
                     Get all the photos you didn't take from your friends.
                 </p>
-            </div>
+
         </div>
         <div class="section" data-anchor="feature15" style="background:url('assets/images/1-02.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
-            <div class="inner-scroll-feature">
-                <p>
+
+                <p class="central">
                     <b>cherish</b>
                     the best moments with your friends and family and share it with others.
                 </p>
-            </div>
+
         </div>
 
-        <div class="section" data-anchor="feature16">
-            <div class="inner-scroll-feature" style="background:#3C3CFD">
-                <p>
+        <div class="section" data-anchor="feature16" style="background:#3C3CFD">
+
+                <p class="central">
                     <b>cherry</b>
                     is secure.
                 </p>
-            </div>
+
         </div>
 
         <div class="section" data-anchor="feature1">
@@ -235,6 +231,11 @@
         </div>
 
     </div>
+	<div class="scroll-icon" data-anchor="feature12">
+
+		<img id="scrollDownElement" src="assets/images/godown.svg">
+	</div>
+
 </body>
 <script type="text/javascript" src="libs/jquery.min.js"></script>
 
@@ -255,7 +256,7 @@
         }, 400, runIt);
     }
 
-    window.requestAnimationFrame(runIt);
+    //window.requestAnimationFrame(runIt);
     $('#scene').parallax();
     //$('#scene-prev').parallax(); $('#scene-2').parallax(); $('#scene-mobile').parallax();
     $(document).ready(function () {
@@ -271,17 +272,7 @@
             $.fn.fullpage.moveSectionDown();
         })
         $('#fullpage').fullpage({
-            anchors: [
-                'feature11',
-                'feature12',
-                'feature13',
-                'feature14',
-                'feature15',
-                'feature16',
-                'feature1',
-                'feature2',
-                'feature4'
-            ],
+
             touchSensitivity: 15,
             lockAnchors: true,
             scrollingSpeed: 700,
