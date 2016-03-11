@@ -44,8 +44,8 @@
                     <li class="layer" data-depth="0.20">
 
                         <p style="color:#FFF">
-                            <b>Collect</b>
-                            photos and share with your family and friends. Cherry is here for all your photo needs.
+                            <b>Create</b>
+                            memories that are close to your heart with the people closest to your heart.
                         </p>
                     </li>
                 </div>
@@ -61,8 +61,8 @@
 
             <div class="inner-scroll-feature">
                 <p >
-                    <b>Collect</b>
-                    photos and share with your family and friends.
+                    <b>preserve</b>
+                    those special moments with your family and loved ones.
                 </p>
             </div>
         </div>
@@ -76,8 +76,8 @@
         <div class="section" data-anchor="feature15" style="background:url('assets/images/1-02.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
             <div class="inner-scroll-feature">
                 <p>
-                    <b>preserve</b>
-                    those special moments with your loved ones
+                    <b>cherish</b>
+                    the best moments with your friends and family and share it with others.
                 </p>
             </div>
         </div>
@@ -93,10 +93,10 @@
 
         <div class="section" data-anchor="feature1">
 
-			<h2 id="it-works">How it works</h2>
             <div class="mobile-section">
                 <div class="mobile">
                     <div class="iphone">
+						<h2 id="it-works">How it works</h2>
                         <div class="feature-wrapper">
                             <div id="scene">
                                 <li class="layer" data-depth="0.40">
@@ -178,6 +178,14 @@
                                 </li>
                             </div>
                         </div>
+						<div class="custom-nav-horizontal">
+							<div class="center">
+
+							<div class="bar bar-1"></div>
+
+							<div class="bar-slider"></div>
+						</div>
+						</div>
                     </div>
                 </div>
             </div>
@@ -337,18 +345,21 @@
                                     $('.info-2').addClass('fadeInUp');
                                     $('.info-2').css('display', 'block')
                                     //$('.info-2').hide(500);  $('#feat1').addClass('animated fadeInUp');
+									$('.bar-slider').css({'transform':'translateX(100px)'})
                                 } else if (myslideIndex == 1) {
                                     $('.info-2').removeClass('fadeInUp');
                                     $('.info-2').addClass('fadeOutDown');
                                     $('.info-3').removeClass('fadeOutDown');
                                     $('.info-3').addClass('fadeInUp');
                                     $('.info-3').css('display', 'block')
+									$('.bar-slider').css({'transform':'translateX(200px)'})
                                 } else if (myslideIndex == 2) {
                                     $('.info-3').removeClass('fadeInUp');
                                     $('.info-3').addClass('fadeOutDown');
                                     $('.info-4').removeClass('fadeOutDown');
                                     $('.info-4').addClass('fadeInUp');
-                                    $('.info-4').css('display', 'block')
+                                    $('.info-4').css('display', 'block');
+									$('.bar-slider').css({'transform':'translateX(300px)'})
                                 }
 
                                 sliding = true;
@@ -364,18 +375,21 @@
                                     $('.info-4').addClass('fadeOutDown');
                                     $('.info-3').removeClass('fadeOutDown');
                                     $('.info-3').addClass('fadeInUp');
+									$('.bar-slider').css({'transform':'translateX(200px)'})
                                     //$('.info-2').css('display' , 'block')
                                 } else if (myslideIndex == 2) {
                                     $('.info-3').removeClass('fadeInUp');
                                     $('.info-3').addClass('fadeOutDown');
                                     $('.info-2').removeClass('fadeOutDown');
                                     $('.info-2').addClass('fadeInUp');
+									$('.bar-slider').css({'transform':'translateX(100px)'})
                                     //$('.info-2').css('display' , 'block')
                                 } else if (myslideIndex == 1) {
                                     $('.info-2').removeClass('fadeInUp');
                                     $('.info-2').addClass('fadeOutDown');
                                     $('.info-1').removeClass('fadeOutDown');
                                     $('.info-1').addClass('fadeInUp');
+									$('.bar-slider').css({'transform':'translateX(2px)'})
                                 }
                                 sliding = true;
                                 $.fn.fullpage.moveSlideLeft();

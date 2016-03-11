@@ -153,7 +153,7 @@ footer {
     padding: 0;
     border: 0;
     height: 100%;
-	background: rgba(0, 0, 0, 0.37);
+    background: rgba(0, 0, 0, 0.37);
     font-size: 100%;
     font: inherit;
     vertical-align: baseline;
@@ -164,7 +164,6 @@ footer {
     font-weight: 300;
     line-height: 2;
     position: absolute;
-
     left: 50%;
     top: 50%;
     color: white;
@@ -306,7 +305,7 @@ ul.slick-dots {
 .info {
     position: absolute;
     transition: all 3s;
-    top: 100px;
+    top: 0px;
     opacity: 0;
     display: none;
     height: 120px;
@@ -375,7 +374,7 @@ ul.slick-dots {
     float: right;
 }
 .feat-sml-text {
-    font-size: 16px;
+    font-size: 14px;
     padding: 5px;
     text-align: right;
 }
@@ -385,7 +384,7 @@ ul.slick-dots {
     text-align: right;
 }
 .feat-sml-text-left {
-    font-size: 16px;
+    font-size: 14px;
     padding: 5px;
     text-align: left;
     ;
@@ -492,6 +491,7 @@ ul.slick-dots {
 .fp-slidesNav.bottom {
     position: absolute;
     bottom: 100px;
+    display: none;
 }
 .app-links {
     width: 130px;
@@ -513,11 +513,10 @@ ul.slick-dots {
     height: 100%;
     width: 100%;
     object-fit: contain;
-	transition: all ease-out 0.3s;
+    transition: all ease-out 0.3s;
 }
-
 .app-anchor img:hover {
-transform: scale(1.2);
+    transform: scale(1.2);
 }
 .app-link {
     width: 150px;
@@ -582,7 +581,7 @@ transform: scale(1.2);
     margin-right: 10px;
 }
 #it-works {
-    top: 100px;
+    top: -80px;
     text-align: center;
     font-size: 50px;
     position: relative;
@@ -590,12 +589,57 @@ transform: scale(1.2);
     margin: auto;
     font-weight: 300;
 }
+.center {
+    width: 400px;
+    height: 20px;
+    position: relative;
+    margin: auto;
+}
+.custom-nav-horizontal {
+    width: 100%;
+    z-index: 1000000 margin: auto;
+    position: relative;
+    height: 20px;
+    bottom: 0px;
+}
+.bar {
+    margin: 0;
+    border: none;
+    padding: 0;
+    height: 1px;
+    background: #002FFF;
+    width: 100%;
+    display: inline-block;
+}
+.bar-slider {
+    background: #002FFF;
+    height: 10px;
+    position: relative;
+    width: 24%;
+    transition: all ease-out 0.6s;
+    position: absolute;
+    top: 9px;
+	transform: translateX(2px);
+}
 .store-image {
     height: 80%;
     background: yellow;
     display: table-cell;
 }
-@media (min-width: 1000px) {
+
+@media (max-height: 900px) {
+	.iphone {
+		transform: scale(0.9)
+	}
+}
+
+@media (max-height: 800px) {
+	.iphone {
+		transform: scale(0.8)
+	}
+}
+
+/*@media (min-width: 1000px) {
     @media (max-height: 800px) {
         .fp-slidesNav.bottom {
             bottom: 50px;
@@ -635,6 +679,7 @@ transform: scale(1.2);
         .fp-slidesNav.bottom {
             bottom: 30px;
             margin-left: -130px;
+            display: none;
         }
     }
 }
@@ -675,6 +720,7 @@ transform: scale(1.2);
     .fp-slidesNav.bottom {
         position: absolute;
         bottom: 50px;
+        display: none;
     }
     .footer-content {
         width: 96%;
@@ -700,3 +746,4 @@ transform: scale(1.2);
 .count {
     font-size: 40px;
 }
+*/

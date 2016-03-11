@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <style media="screen">
+            body,
+            html {
+                margin: 0;
+                padding: 0;
+                height: 100%;
+                width: 100%;
+            }
+            .container-centerer {
+                height: 100%;
+                width: 100%;
+                position: relative;
+            }
+            .center {
+                width: 80%;
+                margin: auto;
+				position: absolute;
+                height: 50%;
+                background: rgba(255,0,0,0.34);
+            }
+            .bar {
+                margin: 0;
+                border: none;
+                padding: 0;
+                height: 2px;
+                background: blue;
+                width: 24%;
+                display: inline-block;
+            }
+            .bar-slider {
+                background: blue;
+                height: 10px;
+                position: relative;
+                width: 24%;
+                transition: all ease-out 0.8s;
+                position: absolute;
+                top: 9px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="container-centerer">
+            <div class="center">
+                <div class="bar bar-1"></div>
+                <div class="bar bar-2"></div>
+                <div class="bar bar-3"></div>
+                <div class="bar bar-4"></div>
+                <div class="bar-slider"></div>
+            </div>
+        </div>
+    </body>
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {})
+    </script>
+</html>
