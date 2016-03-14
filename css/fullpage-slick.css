@@ -38,7 +38,7 @@ header {
     width: 100%;
     top: 0;
     color: black;
-	padding : 10px;
+    padding: 10px;
 }
 nav {
     height: 100%;
@@ -77,8 +77,7 @@ nav {
     position: relative;
     height: 30px;
     background-color: transparent;
-
-transition: all ease-in 0.6s;
+    transition: all ease-in 0.6s;
 }
 section {
     height: 100%;
@@ -593,83 +592,76 @@ ul.slick-dots {
 }
 .center {
     width: 400px;
-
     height: 20px;
     position: relative;
     margin: auto;
 }
 .custom-nav-horizontal {
     width: 100%;
-    z-index: 1000000 ;
-	margin: auto;
+    z-index: 1000000;
+    margin: auto;
     position: relative;
     height: 20px;
     bottom: 0px;
 }
 .fp-tableCell {
-	background: rgba(0, 0, 0, 0.5);
-	height: 400px;
+    background: rgba(0, 0, 0, 0.5);
+    height: 400px;
 }
 .fp-slides {
-	display: none;
-	height: 400px;
-	background: red
+    display: none;
+    height: 400px;
+    background: red
 }
-
-
 .central {
-	opacity: 0;
-	font-size: 25px;
-	color:#fff;
-	transition: all ease-out 0.6s;
-	transition-delay: 0.4s;
-	font-size: 2em;
-font-weight: 300;
-line-height: 2;
+    opacity: 0;
+    font-size: 25px;
+    color: #fff;
+    transition: all cubic-bezier(0.42, 0, 0, 0.44) 0.8s;
+	transition-delay: 0.2s;
+    font-size: 50px;
+    font-weight: 100;
+    line-height: 2;
+    transform: translateY(100px);
+	width: 80%;
+margin: auto;
 }
-.active .central {
-
-opacity: 1;
+.active .central {}
+.cool-text {
+    opacity: 1;
+    transform: translateY(0px);
 }
-
 .integers {
-	font-size: 20em;
+    font-size: 20em;
     font-weight: 100;
     color: bisque;
     transition: all ease-in 0.4s;
     transition-delay: 0.9s;
-	opacity: 0.2;
+    opacity: 0.2;
 }
-
 .active .integers {
-	opacity: 1;
+    opacity: 1;
 }
-
 .container {
-	display: flex;
-	  justify-content: space-between;
-	  width: 80%;
-	  max-width: 800px;
-	  margin: auto;
-	  background: transparent;
-
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    background: transparent;
 }
-
 .form {
-	height: 450px;
+    height: 450px;
     width: 300px;
     position: relative;
     background: blue;
     margin: auto;
     box-shadow: 10px 10px 10px 10p
 }
-
 .container span {
-	font-size: 15px;
-	color:#333;
+    font-size: 15px;
+    color: #333;
 }
-
-
 .bar {
     margin: 0;
     border: none;
@@ -687,24 +679,22 @@ opacity: 1;
     transition: all ease-out 0.6s;
     position: absolute;
     top: 9px;
-	transform: translateX(2px);
+    transform: translateX(2px);
 }
 .store-image {
     height: 80%;
     background: yellow;
     display: table-cell;
 }
-
 @media (max-height: 900px) {
-	.iphone {
-		transform: scale(0.9)
-	}
+    .iphone {
+        transform: scale(0.9)
+    }
 }
-
 @media (max-height: 800px) {
-	.iphone {
-		transform: scale(0.8)
-	}
+    .iphone {
+        transform: scale(0.8)
+    }
 }
 
 /*@media (min-width: 1000px) {

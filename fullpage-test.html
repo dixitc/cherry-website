@@ -38,7 +38,7 @@
             </nav>
         </header>
         <div id="fullpage">
-            <div class="section" data-anchor="feature11" style="background:url('assets/images/1-04.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+            <div class="section" id="feature-1" data-anchor="feature11" style="background:url('assets/images/1-04.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
 
                     <div id="scene-prev" style="top:45%;">
                     <li class="layer" data-depth="0.20">
@@ -53,7 +53,7 @@
 
 
         </div>
-        <div class="section" data-anchor="feature13" style="background:url('assets/images/1-03.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+        <div class="section" id="feature-2" data-anchor="feature13" style="background:url('assets/images/1-03.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
 
 
                 <p class="central">
@@ -62,14 +62,14 @@
                 </p>
 
         </div>
-        <div class="section" data-anchor="feature14" style="background:url('assets/images/1-01.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+        <div class="section" id="feature-3" data-anchor="feature14" style="background:url('assets/images/1-01.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
 
                 <p class="central">
                     Get all the photos you didn't take from your friends.
                 </p>
 
         </div>
-        <div class="section" data-anchor="feature15" style="background:url('assets/images/1-02.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+        <div class="section" id="feature-4" data-anchor="feature15" style="background:url('assets/images/1-02.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
 
                 <p class="central">
                     <b>cherish</b>
@@ -78,7 +78,7 @@
 
         </div>
 
-        <div class="section" data-anchor="feature16" style="background:#3C3CFD">
+        <div class="section" id="feature-5" data-anchor="feature16" style="background:#3C3CFD">
 
                 <p class="central">
                     <b>cherry</b>
@@ -192,7 +192,7 @@
             <div class="slide"></div>
 
         </div>
-        <div class="section" data-anchor="feature2">
+        <div class="section" id="feature-7" data-anchor="feature2">
             <div class="">
 				<div class="container">
 					<div class="info-graphic">
@@ -254,7 +254,9 @@
     </div>
 	<div class="scroll-icon" data-anchor="feature12">
 
-		<img id="scrollDownElement" src="assets/images/godown.svg">
+		<svg class="scroll-down-btn-picto" style="opacity: 1; transform: matrix(1, 0, 0, 1, 0, 0);">
+    <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#sprite-mouse"></use>
+  </svg>
 	</div>
 
 </body>
@@ -291,7 +293,8 @@
         var sliding = false;
         $('.scroll-icon').click(function () {
             $.fn.fullpage.moveSectionDown();
-        })
+        });
+			console.log($('#feature-1 p').addClass('cool-text'));
         $('#fullpage').fullpage({
             touchSensitivity: 15,
             lockAnchors: false,
@@ -328,6 +331,7 @@
             },
             afterLoad: function (anchorLink, index) {
                 //after section loads
+
                 if (index == 7) {
 
                     $('.count').each(function () {
@@ -345,7 +349,20 @@
             },
             onLeave: function (index, nextIndex, direction) {
                 //before section leaves
-
+				$('p').removeClass('cool-text');
+				if (nextIndex == 1){
+					console.log($('#feature-1 p').addClass('cool-text'));
+				}else if(nextIndex == 2){
+					console.log($('#feature-2 p').addClass('cool-text'));
+				}else if(nextIndex == 3){
+					console.log($('#feature-3 p').addClass('cool-text'));
+				}else if(nextIndex == 4){
+					console.log($('#feature-4 p').addClass('cool-text'));
+				}else if(nextIndex ==5){
+					console.log($('#feature-5 p').addClass('cool-text'));
+				}else if(nextIndex ==7){
+					console.log($('#feature-7 span').addClass('cool-text'));
+				}
                 console.log('leaving ....');
                 if (sliding) {
                     return false;
