@@ -115,7 +115,6 @@ section {
 }
 footer {
     position: relative;
-    ;
     height: 50px;
     width: 100%;
     background: rgba(0, 0, 0, 0.54);
@@ -616,6 +615,8 @@ ul.slick-dots {
 	height: 400px;
 	background: red
 }
+
+
 .central {
 	opacity: 0;
 	font-size: 25px;
@@ -630,6 +631,44 @@ line-height: 2;
 
 opacity: 1;
 }
+
+.integers {
+	font-size: 20em;
+    font-weight: 100;
+    color: bisque;
+    transition: all ease-in 0.4s;
+    transition-delay: 0.9s;
+	opacity: 0.2;
+}
+
+.active .integers {
+	opacity: 1;
+}
+
+.container {
+	display: flex;
+	  justify-content: space-between;
+	  width: 80%;
+	  max-width: 800px;
+	  margin: auto;
+	  background: transparent;
+
+}
+
+.form {
+	height: 450px;
+    width: 300px;
+    position: relative;
+    background: blue;
+    margin: auto;
+    box-shadow: 10px 10px 10px 10p
+}
+
+.container span {
+	font-size: 15px;
+	color:#333;
+}
+
 
 .bar {
     margin: 0;
