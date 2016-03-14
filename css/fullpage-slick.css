@@ -619,15 +619,18 @@ ul.slick-dots {
     color: #fff;
     transition: all cubic-bezier(0.42, 0, 0, 0.44) 0.8s;
 	transition-delay: 0.2s;
-    font-size: 50px;
+    font-size: 3em;
     font-weight: 100;
     line-height: 2;
-    transform: translateY(100px);
+    transform: translateY(300px);
 	width: 80%;
 margin: auto;
+
+max-width: 950px;
 }
 .active .central {}
 .cool-text {
+	transform: scale(1);
     opacity: 1;
     transform: translateY(0px);
 }
@@ -695,6 +698,20 @@ margin: auto;
     .iphone {
         transform: scale(0.8)
     }
+}
+@media (max-width:600px) {
+	body {
+		font-size: 10px;
+	}
+	.app-links {
+		width: 100px;
+	}
+	#header-content {
+		width: 100%;
+	}
+	.header-title {
+		width: 100px;
+	}
 }
 
 /*@media (min-width: 1000px) {
