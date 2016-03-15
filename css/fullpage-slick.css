@@ -618,6 +618,8 @@ a img {
     width: 80%;
     max-width: 800px;
     margin: auto;
+	margin-top: 10px;
+	position: relative;
     background: transparent;
 }
 .form {
@@ -654,14 +656,26 @@ a img {
 
 .contact {
 	max-width: 300px;
-background: transparent;
-border: none;
-border-bottom: 3px solid #1DC31F;
-padding: 10px;
-font-size: 18px;
-padding-bottom: 5px;
-color: #1DC31F;
-margin: 10px;
+    background: transparent;
+	outline: none;
+    border: none;
+    border-bottom: 3px solid #2FC12F;
+    padding: 10px;
+    font-size: 18px;
+    padding-bottom: 5px;
+    color: #5B6B5B;
+    margin: 0px;
+}
+
+.feedback-text {
+	padding: 15px;
+    color: #2FC12F;
+    max-width: 600px;
+	width: 60%;
+    margin: auto;
+
+    top: 10px;
+    position: relative;
 }
 .store-image {
     height: 80%;
