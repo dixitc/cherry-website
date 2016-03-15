@@ -41,8 +41,7 @@ header {
 }
 nav {
     height: 100%;
-	padding: 10px;
-
+    padding: 10px;
 }
 .downloadImg {
     max-height: 50px;
@@ -120,7 +119,7 @@ footer {
     position: relative;
     height: 50px;
     width: 100%;
-    background: #333;
+    background: transparent;
     text-align: center;
 }
 .downloadHeader {
@@ -421,31 +420,36 @@ ul.slick-dots {
 }
 .fp-slidesNav.bottom {
     opacity: 0;
-	display: block;
-
+    display: block;
     transition: all ease-in 0.8s;
     /* opacity: 1; */
 }
 .app-links {
-    width: 130px;
+    width: 300px;
     padding-right: 10px;
     float: right;
     height: 60px;
     display: table-cell;
 }
-.app-anchor {
-    text-align: left;
-    width: 130px;
-    background-color: transparent display: inline-block;
-    border-radius: 5px;
-    position: relative;
-    transition-property: background-color;
-    transition-duration: 400ms;
+
+.app-store {
+	margin-right: 20px;
 }
-.app-anchor img {
-    height: 100%;
-    width: 100%;
-    object-fit: contain;
+
+.header-links {
+    width: 350px;
+    margin: 0px;
+    padding: 0px;
+    float: right;
+	margin-top: 10px;
+}
+.header-links li {
+	display: inline;
+}
+
+a img {
+    width: 150px;
+
     transition: all ease-out 0.3s;
 }
 .app-anchor img:hover {
@@ -552,7 +556,7 @@ ul.slick-dots {
     opacity: 0;
     font-size: 25px;
     color: #fff;
-    font-size: 3em;
+    font-size: 2.5em;
     font-weight: 100;
     line-height: 2;
     transition: all cubic-bezier(0.42, 0, 0, 0.44) 0.8s;
@@ -572,77 +576,41 @@ ul.slick-dots {
     font-size: 100px;
     font-weight: 100;
     color: rgba(12, 62, 142, 0.87);
-    transition: all ease-in 0.4s;
-    transition-delay: 0.9s;
-    opacity: 0.2;
 
+    opacity: 1;
     width: 100%;
-
-}
-#scene {
-	height: 100%;
-	width: 100%;
-}
-.layer {
-	height: 100%;
-	width: 100%;
 }
 
-.layer img{
-	height: 400px;
-	width: 230px;
-}
+
 .graphic-div {
-	display: table-cell;
+    display: table-cell;
     vertical-align: middle;
-	opacity: 0;
-	transition: all ease-in 0.8s;
+    opacity: 1;
+
 }
 .active .graphic-div {
-	opacity: 1;
-}
-
-.graphic-1 {
-	transition-delay: 0.5s;
-}
-
-.graphic-2 {
-	transition-delay: 1.5s;
-}
-
-.graphic-3 {
-	transition-delay: 2.5s;
-}
-
-
-.graphic-text {
-	font-size: 15px;
-	font-weight: 300;
-
-	color: #3E3838;
-
-}
-
-.active .integers {
     opacity: 1;
+}
+.graphic-text {
+    font-size: 15px;
+    font-weight: 300;
+    color: #3E3838;
 }
 
 .graphic-li {
-	text-align: center;
+    text-align: center;
     display: table-row;
     background: white;
 }
-
 .info-graphics {
-	height: 100%;
-	    margin: 0px;
-display: table;
-table-layout: fixed;
-width: 100%;
-padding: 0px;
-
--moz-box-sizing: border-box;
-box-sizing: border-box;
+    height: 100%;
+    margin: 0px;
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    padding: 0px;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 .container {
     display: flex;
@@ -683,6 +651,18 @@ box-sizing: border-box;
     top: 9px;
     transform: translateX(2px);
 }
+
+.contact {
+	max-width: 300px;
+background: transparent;
+border: none;
+border-bottom: 3px solid #1DC31F;
+padding: 10px;
+font-size: 18px;
+padding-bottom: 5px;
+color: #1DC31F;
+margin: 10px;
+}
 .store-image {
     height: 80%;
     background: yellow;
@@ -699,8 +679,8 @@ box-sizing: border-box;
     }
 }
 
-
 /* tablet and mobile portrait*/
+
 @media (max-width:600px) {
     body {
         font-size: 10px;
@@ -717,15 +697,15 @@ box-sizing: border-box;
     .header-title {
         width: 80px;
     }
-    .brand {
-        height: 83%;
-    }
     .info {
         display: none;
         opacity: 0;
     }
     .central {
         transform: translateY(0px);
+		line-height: 1.5;
+
+		font-size: 2.5em;
         opacity: 1;
     }
     .iphone {
@@ -739,9 +719,9 @@ box-sizing: border-box;
     .fp-slidesNav.bottom ul li a span {
         background: #fff;
     }
-	.fp-slides .fp-tableCell {
-		vertical-align: text-top;
-	}
+    .fp-slides .fp-tableCell {
+        vertical-align: text-top;
+    }
     .integers {
         font-size: 35px;
     }
@@ -768,14 +748,35 @@ box-sizing: border-box;
         margin: auto;
         z-index: 100000000;
     }
+	nav {
+		padding: 3px;
+	}
+	.brand {
+		height: 70%;
+	}
+	.app-store {
+		margin-right: 5px;
+	}
+	.header-links {
+		width: 170px;
+		margin-top: 20px;
+	}
+	a img {
+		width: 80px;
+	}
+
+	.social-list {
+		display: none;
+	}
+
 }
 
 /* only mobile portrait*/
-@media (max-width: 400px) {
-	.slide-sml-text {
-		font-size: 16px;
-	}
 
+@media (max-width: 400px) {
+    .slide-sml-text {
+        font-size: 16px;
+    }
 }
 
 /*@media (min-width: 1000px) {
