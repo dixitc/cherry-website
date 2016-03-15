@@ -25,3 +25,11 @@ fix normal scrolling on feedback and infographic screen. in-progress .
 refine responsive breakpoints : todo.
 
 font:roboto-slab bold 24px
+
+
+FINAL THINGS TO-DO :
+Make tablet and mobile landscape.
+Fix info graphics screen. Doing.
+Fix feedback section and footer.
+Fix header. (Use cherry web-app header).
+Fix different images for different layouts
