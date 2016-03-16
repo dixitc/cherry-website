@@ -35,6 +35,8 @@ Fix feedback section and footer.
 Fix header. (Use cherry web-app header).
 Fix different images for different layouts.
 Finish submitting feedback with error handling andeverything else.
+Fix graphics animation , begin from 0.
+
 
 5px 5px 0 rgba(255, 255, 255, 0.38), 10px 10px 0 rgba(255, 255, 255, 0.57), 15px 15px 0 rgba(255, 255, 255, 0.51), 20px 20px 0 rgba(255, 255, 255, 0.51)
 
@@ -45,6 +47,12 @@ text-shadow: 3px 3px 0px #000;
 
 
 4px 4px 0px rgb(255, 35, 0), 7px 7px 0px rgba(0, 0, 0, 0.95)
+
+text-shadow: 4px 4px 0px rgb(51, 0, 255), 7px 7px 0px rgba(218, 24, 51, 0.95), 9px 10px 0px rgba(218, 69, 24, 0.95);
+font-size: 58px;
+padding-right: 15px;
+color: rgba(255, 0, 0, 0.5);
+
 
 .vide0-wrapper{
 width: 66%;
