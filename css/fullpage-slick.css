@@ -947,6 +947,9 @@ max-width: 400px;
 	.social-list {
 		display: none;
 	}
+	.footer-content {
+		width: 90%;
+	}
 
 }
 
@@ -971,6 +974,18 @@ max-width: 400px;
     }
 	.feedback-text {
 		font-size: 24px;
+	}
+	footer {
+		height: 40px;
+	}
+	.footer-content {
+		width: 95%;
+	}
+	.footer-company-title {
+		font-size: 10px;
+	}
+	.footer-company-title a {
+		font-weight: 100;
 	}
 }
 
