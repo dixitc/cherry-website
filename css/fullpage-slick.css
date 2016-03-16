@@ -109,12 +109,20 @@ section {
 }
 .iphone {
     background: url(../assets/images/iphone-other.png) no-repeat;
+	background-position: 50% 50%;
     max-width: 380px;
     min-height: 640px;
     height: 640px;
     margin: auto;
     background-size: 100%;
+	transition: all ease-in 0.5s;
+	opacity: 0.2;
 }
+
+.active .iphone {
+	opacity: 1;
+}
+
 footer {
     position: fixed;
     height: 50px;
@@ -557,12 +565,24 @@ ul.slick-dots {
     margin: auto;
 }
 .custom-nav-horizontal {
+	display: none;
     width: 100%;
     z-index: 1000000;
     margin: auto;
     position: relative;
     height: 20px;
     bottom: 0px;
+	transition: all ease-in 0.3s;
+}
+
+.graphics-container {
+	height:80%;
+	margin:100px;
+	margin-bottom: 150px;
+}
+
+.active .custom-nav-horizontal {
+	display: block;
 }
 .fp-tableCell {
     background: rgba(0, 0, 0, 0);
@@ -598,6 +618,8 @@ ul.slick-dots {
     width: 80%;
     margin: auto;
     max-width: 950px;
+text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.52);
+
 }
 .active .central {}
 .cool-text {
@@ -689,16 +711,21 @@ justify-content: space-around;
 }
 
 .contact {
-	max-width: 300px;
+	width: 100%;
     background: transparent;
 	outline: none;
     border: none;
-    border-bottom: 3px solid #2FC12F;
+    border-bottom: 3px dotted #2FC12F;
+	transition: all ease-in 0.3s;
     padding: 10px;
     font-size: 18px;
     padding-bottom: 5px;
     color: #5B6B5B;
     margin: 0px;
+}
+
+.contact:focus {
+	border-bottom: 3px solid #2FC12F;
 }
 
 #fp-nav.right {
@@ -746,9 +773,19 @@ footer.dark-theme {
 outline: none;
 padding: 10px;
 background: white;
-width: 140px;
+width: 120px;
 background: rgb(255, 255, 255);
+background: transparent;
+color:green;
+margin-bottom: 20px;
+border: 1px solid green;
+border-radius: 3px;
 
+}
+
+.submit:hover , .submit:focus {
+	background: green;
+	color : white;
 }
 
 #fp-nav ul li a span.dark-theme {
@@ -760,11 +797,22 @@ background: rgb(255, 255, 255);
 	background :#333;
 }
 
+.feedback-container {
+	margin-bottom: 30px;
+width: 70%;
+margin: auto;
+margin-bottom: 38px;
+border: 0.3px dotted green;
+margin-top: 30px;
+position: relative;
+top: 30px;
+max-width: 400px;
+}
 
 .feedback-text {
-	padding: 15px;
+	padding: 10px;
     color: #fff;
-    max-width: 600px;
+    max-width: 300px;
 	font-size: 28px;
 	width: 60%;
     margin: auto;
@@ -782,10 +830,20 @@ background: rgb(255, 255, 255);
         transform: scale(0.9)
     }
 }
+/* small desktops and laptops   */
 @media (max-height: 800px) {
+	body {
+		font-size: 13px;
+	}
     .iphone {
         transform: scale(0.8)
     }
+	.link-img {
+		width: 125px;
+	}
+	.header-links {
+		width: 300px;
+	}
 }
 
 /* tablet and mobile portrait*/
@@ -820,8 +878,10 @@ background: rgb(255, 255, 255);
     .iphone {
         transform: scale(0.7);
         min-height: 400px;
-        height: 540px;
+
     }
+
+
     .active .fp-slidesNav.bottom {
         opacity: 1;
     }
@@ -837,10 +897,7 @@ background: rgb(255, 255, 255);
     .custom-nav-horizontal {
         display: none;
     }
-	.info-graphics {
-		display: table;
-	    table-layout: fixed;
-	}
+
     #fp-nav.right {
         display: none;
     }
@@ -861,6 +918,7 @@ background: rgb(255, 255, 255);
         margin: auto;
         z-index: 100000000;
     }
+
 	nav {
 		padding: 3px;
 	}
@@ -887,6 +945,19 @@ background: rgb(255, 255, 255);
 /* only mobile portrait*/
 
 @media (max-width: 400px) {
+	.info-graphics {
+		display: table;
+		table-layout: fixed;
+	}
+	.graphics.fp-auto-height.fp-section {
+		height: 100% !important;
+	}
+	.graphics-container {
+		height:cal(100% - 60px);
+		margin:20px;
+		margin-top: 60px;
+		margin-bottom: 30px;
+	}
     .slide-sml-text {
         font-size: 16px;
     }

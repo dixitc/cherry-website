@@ -29,6 +29,7 @@ font:roboto-slab bold 24px
 
 FINAL THINGS TO-DO :
 Make tablet and mobile landscape.
+Make laptops responsive ----- need to scale down nav dots , iphone , central text 
 Fix info graphics screen. Done.
 Fix feedback section and footer.
 Fix header. (Use cherry web-app header).
