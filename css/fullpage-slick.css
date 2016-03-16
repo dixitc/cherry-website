@@ -618,7 +618,7 @@ ul.slick-dots {
     width: 80%;
     margin: auto;
     max-width: 950px;
-text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.52);
+	text-shadow:2px 1px 0px rgba(0, 0, 0, 0.22), 3px 3px 0px rgba(0, 0, 0, 0.2);
 
 }
 .active .central {}
@@ -626,6 +626,10 @@ text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.52);
     transform: scale(1);
     opacity: 1;
     transform: translateY(0px);
+}
+b {
+
+
 }
 .integers {
     font-size: 100px;
@@ -816,7 +820,10 @@ max-width: 400px;
 	font-size: 28px;
 	width: 60%;
     margin: auto;
-
+	text-shadow: 4px 4px 0px rgb(51, 0, 255), 7px 7px 0px rgba(218, 24, 51, 0.95), 9px 10px 0px rgba(218, 69, 24, 0.95);
+	    font-size: 28px;
+	    padding-right: 15px;
+	    color: rgba(202, 241, 14, 0.81);
     top: 10px;
     position: relative;
 }
@@ -890,6 +897,7 @@ max-width: 400px;
     }
     .fp-slides .fp-tableCell {
         vertical-align: text-top;
+		height: 40% !important;
     }
     .integers {
         font-size: 35px;
@@ -961,6 +969,9 @@ max-width: 400px;
     .slide-sml-text {
         font-size: 16px;
     }
+	.feedback-text {
+		font-size: 24px;
+	}
 }
 
 /*@media (min-width: 1000px) {

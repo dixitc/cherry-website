@@ -29,9 +29,28 @@ font:roboto-slab bold 24px
 
 FINAL THINGS TO-DO :
 Make tablet and mobile landscape.
-Make laptops responsive ----- need to scale down nav dots , iphone , central text 
+Make laptops responsive ----- need to scale down nav dots , iphone , central text
 Fix info graphics screen. Done.
 Fix feedback section and footer.
 Fix header. (Use cherry web-app header).
 Fix different images for different layouts.
 Finish submitting feedback with error handling andeverything else.
+
+5px 5px 0 rgba(255, 255, 255, 0.38), 10px 10px 0 rgba(255, 255, 255, 0.57), 15px 15px 0 rgba(255, 255, 255, 0.51), 20px 20px 0 rgba(255, 255, 255, 0.51)
+
+
+text-shadow: 0 6px 0 9px hsl(20, 100%, 50%),0 8px 0 9px hsl(20, 100%, 25%),0 9px 2px 9px hsla(20, 100%, 15%, 0.5),0 15px 0 45px hsl(90, 100%, 50%),0 17px 0 45px hsl(90, 100%, 25%),0 17px 2px 45px hsla(90, 100%, 15%, 0.5);
+
+text-shadow: 3px 3px 0px #000;
+
+
+4px 4px 0px rgb(255, 35, 0), 7px 7px 0px rgba(0, 0, 0, 0.95)
+
+.vide0-wrapper{
+width: 66%;
+    background: red;
+    height: 34.65%;
+    display: block;
+    position: relative;
+    top: 15px;
+    left: 65px;}
