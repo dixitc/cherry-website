@@ -45,7 +45,10 @@
 
                 <p class="central">
                     <b>preserve</b>
-                    those special moments with your family and loved ones.
+                    those special moments
+                </p>
+                <p class="central">
+                    with your family and loved ones.
                 </p>
 
             </div>
@@ -60,21 +63,27 @@
 
                 <p class="central">
                     <b>cherish</b>
-                    the best moments with your friends and family and share it with others.
+                    the best moments with your friends
+                </p>
+                <p class="central">
+                    and family and share it with others.
                 </p>
 
             </div>
 
-            <div class="section" id="feature-5" data-anchor="feature16" style="background:#3C3CFD">
+            <div class="section" id="feature-5" data-anchor="feature16" style="background:url('assets/images/1-05.png');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
 
                 <p class="central">
-                    <b>cherry</b>
-                    is secure.
+                    <b>collect</b>
+                    photos from other members
+                </p>
+                <p class="central">
+                    of the group into the same memory.
                 </p>
 
             </div>
 
-            <div class="section" data-anchor="feature1">
+            <div class="section" data-anchor="feature1" id="feature-6">
 
                 <div class="mobile-section">
                     <div class="mobile">
@@ -228,54 +237,52 @@
 
         <div class="section fp-auto-height" data-anchor="feature4">
             <div style="background:#191616;">
-				<div class="">
-<p class="feedback-text">
-	Get in touch
-</p>
-					<p class="feedback-text">
+                <div class="">
+                    <p class="feedback-text">
+                        Get in touch
+                    </p>
+                    <p class="feedback-text">
 
-						<input type="text" class="contact" name="name" placeholder="email" value="">
-					</p>
-					<p class="feedback-text">
-						<input type="text" class="contact" name="name" placeholder="feedback" value="">
+                        <input type="text" class="contact" name="name" placeholder="email" value="">
+                    </p>
+                    <p class="feedback-text">
+                        <input type="text" class="contact" name="name" placeholder="feedback" value="">
 
-					</p>
-					<p class="feedback-text">
-						<input type="button" name="name" class="submit" value="Submit">
-					</p>
-				</div>
+                    </p>
+                    <p class="feedback-text">
+                        <input type="button" name="name" class="submit" value="Submit">
+                    </p>
+                </div>
 
-
-                    <div class="container">
-                        <span>Contact</span>
-                        <span>Terms</span>
-                        <span>Privacy</span>
-                        <span>Google +</span>
-                        <span>Facebook</span>
-                        <span>Twitter</span>
-                    </div>
-
-                <footer id="footer-section">
-                    <div class="footer-content">
-                        <p class="footer-company-title">
-                            <a class="my-anchor" href="http://www.triconinfotech.com/">
-                                A Tricon Infotech product
-                            </a>
-                        </p>
-                        <ul class="social-list">
-                            <li class="social-extra">Contact Us</li>
-                            <li class="social-extra">Terms of Use</li>
-                            <li class="social-extra">Privacy policy</li>
-                            <li class="social-icons"></li>
-                            <li class="social-icons"></li>
-                            <li class="social-icons"></li>
-                        </ul>
-
-                    </div>
-                </footer>
+                <div class="container">
+                    <span>Contact</span>
+                    <span>Terms</span>
+                    <span>Privacy</span>
+                    <span>Google +</span>
+                    <span>Facebook</span>
+                    <span>Twitter</span>
+                </div>
 
             </div>
         </div>
+        <footer id="footer-section">
+            <div class="footer-content">
+                <p class="footer-company-title">
+                    <a class="my-anchor" href="http://www.triconinfotech.com/">
+                        A Tricon Infotech product
+                    </a>
+                </p>
+                <ul class="social-list">
+                    <li class="social-extra">Contact Us</li>
+                    <li class="social-extra">Terms of Use</li>
+                    <li class="social-extra">Privacy policy</li>
+                    <li class="social-icons"></li>
+                    <li class="social-icons"></li>
+                    <li class="social-icons"></li>
+                </ul>
+
+            </div>
+        </footer>
 
     </div>
     <script type="text/javascript" src="libs/jquery.min.js"></script>
@@ -338,34 +345,34 @@
             verticalCentered: true,
             controlArrows: false,
             fitToSection: true,
-			
-            afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
-				if($(window).width() > 600){
 
-					//after slide loads
-					console.log('afterSlideLoad');
-					sliding = false;
-					console.log(myslideIndex + ' <-- prev-myslideIndex -- currentSlideIndex --> ' + slideIndex);
-					myslideIndex = slideIndex;
-				}
+            afterSlideLoad: function (anchorLink, index, slideAnchor, slideIndex) {
+                if ($(window).width() > 600) {
+
+                    //after slide loads
+                    console.log('afterSlideLoad');
+                    sliding = false;
+                    console.log(myslideIndex + ' <-- prev-myslideIndex -- currentSlideIndex --> ' + slideIndex);
+                    myslideIndex = slideIndex;
+                }
             },
             afterLoad: function (anchorLink, index) {
                 //after section loads
 
-				if ($(window).width() > 600) {
-                if (index == 7) {
-                    $('.count').each(function () {
-                        $(this).prop('Counter', 0).animate({
-                            Counter:  $(this).text()
-                        }, {
-                            duration: 1000,
-                            easing: 'swing',
-                            step: function (now) {
-                                $(this).text(Math.ceil(now));
-                            }
+                if ($(window).width() > 600) {
+                    if (index == 7) {
+                        $('.count').each(function () {
+                            $(this).prop('Counter', 0).animate({
+                                Counter: $(this).text()
+                            }, {
+                                duration: 1000,
+                                easing: 'swing',
+                                step: function (now) {
+                                    $(this).text(Math.ceil(now));
+                                }
+                            });
                         });
-                    });
-				}
+                    }
                 }
             },
             onLeave: function (index, nextIndex, direction) {
@@ -386,14 +393,17 @@
                         $('#feature-7 span').addClass('cool-text');
                     } else if (nextIndex == 6) {
                         $('.mobile-section').addClass('cool-text');
+						$('#fp-nav ul li a span').addClass('dark-theme');
+						
                     } else {
                         $('.mobile-section').addClass('cool-text');
                     }
-                }else {
-					if (nextIndex == 6) {
+
+                } else {
+                    if (nextIndex == 6) {
                         $('.mobile-section').addClass('cool-text');
                     }
-				}
+                }
                 console.log('leaving ....');
                 if (sliding) {
                     return false;
@@ -401,7 +411,8 @@
                 if (index == 6) {
 
                     if (nextIndex != (index + 1) && nextIndex != (index - 1)) {
-
+						$('#fp-nav ul li a span').removeClass('dark-theme');
+						$('#fp-nav ul li a.active span').removeClass('dark-active');
                         $.fn.fullpage.moveTo(nextIndex)
                         //moveTo nextIndex
                     } else {
@@ -472,7 +483,10 @@
                                     //myslideIndex --;
                                     return false;
                                 }
-                            }
+                            }else {
+								$('#fp-nav ul li a span').removeClass('dark-theme');
+								$('#fp-nav ul li a.active span').removeClass('dark-active');
+							}
                         }
                     }
                 }

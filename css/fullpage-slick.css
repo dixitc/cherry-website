@@ -541,7 +541,7 @@ a img {
     bottom: 0px;
 }
 .fp-tableCell {
-    background: rgba(0, 0, 0, 0.5);
+    background: rgba(0, 0, 0, 0.28);
     height: 400px;
 }
 #feature-7 .fp-tableCell {
@@ -556,9 +556,9 @@ a img {
     opacity: 0;
     font-size: 25px;
     color: #fff;
-    font-size: 2.5em;
-    font-weight: 100;
-    line-height: 2;
+    font-size: 2.3em;
+    font-weight: 300;
+    line-height: 1.4;
     transition: all cubic-bezier(0.42, 0, 0, 0.44) 0.8s;
     transition-delay: 0.2s;
     transform: translateY(300px);
@@ -666,6 +666,52 @@ a img {
     color: #5B6B5B;
     margin: 0px;
 }
+
+#fp-nav.right {
+	right: 5px;
+}
+
+#fp-nav ul li, .fp-slidesNav ul li {
+	margin: 22px;
+}
+
+#fp-nav ul li a.active span, .fp-slidesNav ul li a.active span, #fp-nav ul li:hover a.active span, .fp-slidesNav ul li:hover a.active span {
+     height: 6px;
+     width: 6px;
+	 margin: -2px 0 0 -2px;
+    border-radius: 100%;
+    background: #fff;
+}
+
+
+
+#fp-nav ul li a span {
+    border-radius: 50%;
+    position: absolute;
+    z-index: 1;
+    height: 6px;
+    width: 6px;
+    border: 1px solid #fff;
+    background: transparent;
+    left: 50%;
+    transform: scale(1.2);
+    top: 50%;
+    margin: -2px 0 0 -2px;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+    -o-transition: all .1s ease-in-out;
+    transition: all .1s ease-in-out;
+}
+
+#fp-nav ul li a span.dark-theme {
+	border: 1px solid #333;
+	background: transparent;
+}
+
+#fp-nav ul li a.active span.dark-theme {
+	background :#333;
+}
+
 
 .feedback-text {
 	padding: 15px;
