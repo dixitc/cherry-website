@@ -29,7 +29,8 @@ font:roboto-slab bold 24px
 
 FINAL THINGS TO-DO :
 Make tablet and mobile landscape.
-Fix info graphics screen. Doing.
+Fix info graphics screen. Done.
 Fix feedback section and footer.
 Fix header. (Use cherry web-app header).
-Fix different images for different layouts
+Fix different images for different layouts.
+Finish submitting feedback with error handling andeverything else.
