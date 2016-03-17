@@ -742,7 +742,7 @@ ul.slick-dots {
 }
 .contact:focus {
 
-	
+
 
 }
 #fp-nav.right {
@@ -879,7 +879,18 @@ footer.rock-bottom {
     .mobile {
         top: 50px;
     }
+	#it-works {
+		font-size: 40px;
+	}
+	.integers {
+		font-size: 80px;
+	}
+	.iphone {
+		transform: scale(0.8);
+	}
 }
+
+
 
 /* portrait between normal tablet and  */
 
