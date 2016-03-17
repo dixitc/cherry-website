@@ -4,6 +4,7 @@
     <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cherry</title>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,700,100italic,300,300italic,400italic,500,500italic,700italic,900,900italic' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/2.7.8/jquery.fullPage.min.css" media="screen" title="no title" charset="utf-8">
         <link rel="stylesheet" href="libs/animate.css" media="screen" title="no title" charset="utf-8">
@@ -16,7 +17,9 @@
             <nav>
                 <div id="header-content">
                     <div class="header-title">
-                        <img src="assets/images/logo.png" class="brand" alt=""/>
+
+                        <object type="image/svg+xml" id="brand" class="brand" data="assets/images/logo-white.svg">
+                            Your browser does not support SVG</object>
                     </div>
                     <ul class="header-links">
                         <li class="app-store">
@@ -53,7 +56,7 @@
 
             </div>
 
-            <div class="section" id="feature-4" data-anchor="feature15" style="background:url('assets/images/1-01.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+            <div class="section" id="feature-4" data-anchor="feature15" style="background:url('assets/images/1-02.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
 
                 <p class="central">
                     <b>collect</b>
@@ -64,7 +67,7 @@
                 </p>
             </div>
 
-            <div class="section" id="feature-5" data-anchor="feature16" style="background:url('assets/images/1-02.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
+            <div class="section" id="feature-5" data-anchor="feature16" style="background:url('assets/images/1-01.jpg');background-size:cover;background-repeat:no-repeat;background-position:50% 50% ">
                 <p class="central">
                     <b>cherish</b>
                     the best moments with your friends
@@ -78,9 +81,9 @@
             <div class="section" data-anchor="feature1" id="feature-6">
 
                 <div class="mobile-section">
+                    <h2 id="it-works">How it works</h2>
                     <div class="mobile">
                         <div class="iphone">
-                            <h2 id="it-works">How it works</h2>
                             <div class="feature-wrapper">
 
                                 <div class="info info-1 animated">
@@ -156,14 +159,15 @@
                                 </li>
                             </div>
                         </div>
-                        <div class="custom-nav-horizontal">
-                            <div class="center">
 
-                                <div class="bar bar-1"></div>
+                    </div>
+                </div>
+                <div class="custom-nav-horizontal">
+                    <div class="center">
 
-                                <div class="bar-slider"></div>
-                            </div>
-                        </div>
+                        <div class="bar bar-1"></div>
+
+                        <div class="bar-slider"></div>
                     </div>
                 </div>
             </div>
@@ -194,66 +198,66 @@
             <div class="graphics-container">
 
                 <ul class="info-graphics">
-					<li class="graphic-li graphic-3">
-						<div class="graphic-div">
+                    <li class="graphic-li graphic-3">
+                        <div class="graphic-div">
 
-							<span class="integers count">2232</span>
-							<p class="graphic-text">
-								memories
-							</p>
-						</div>
-					</li>
-					<li class="graphic-li graphic-1">
-						<div class="graphic-div">
+                            <span class="integers count gr-1">0</span>
+                            <p class="graphic-text">
+                                memories
+                            </p>
+                        </div>
+                    </li>
+                    <li class="graphic-li graphic-1">
+                        <div class="graphic-div">
 
-							<span class="integers count">39979</span>
-							<p class="graphic-text">
-								moments
-							</p>
-						</div>
-					</li>
-					<li class="graphic-li graphic-2">
-						<div class="graphic-div">
+                            <span class="integers count gr-2">0</span>
+                            <p class="graphic-text">
+                                moments
+                            </p>
+                        </div>
+                    </li>
+                    <li class="graphic-li graphic-2">
+                        <div class="graphic-div">
 
-							<span class="integers count">781</span>
-							<p class="graphic-text">
-								members
-							</p>
-						</div>
-					</li>
+                            <span class="integers count gr-3">0</span>
+                            <p class="graphic-text">
+                                users
+                            </p>
+                        </div>
+                    </li>
 
                 </ul>
             </div>
 
         </div>
 
+        <div class="section fp-auto-height" data-anchor="feature4" id="feature-footer">
 
-        <div class="section fp-auto-height" data-anchor="feature4">
-            <div style="background:#191616;">
-                <div class="feedback-container">
-                    <p class="feedback-text">
-                        Get in touch
-                    </p>
-                    <p class="feedback-text">
+            <div class="feedback-container">
 
-                        <input type="text" class="contact" name="name" placeholder="email" value="">
-                    </p>
-                    <p class="feedback-text">
-                        <input type="text" class="contact" name="name" placeholder="feedback" value="">
+                <h2 class="feedback-text ft-1">Get in touch</h2>
 
-                    </p>
-                    <p class="feedback-text">
-                        <input type="button" name="name" class="submit" value="Submit">
-                    </p>
-                </div>
+                <p class="feedback-text">
 
-                <div style="height:100px;width:100%;"></div>
+                    <input type="text" class="contact" name="name" placeholder="Email" value="">
+                </p>
+                <p class="feedback-text">
+
+                    <textarea class="contact" placeholder="Feedback" name="name" rows="2" cols="40"></textarea>
+
+                </p>
+                <p class="feedback-text sb-1">
+                    <input type="button" name="name" class="submit" value="Submit">
+                </p>
             </div>
+
+            <div style="height:100px;width:100%;"></div>
+
         </div>
 
     </div>
     <div class="scroll-icon">
-        <img src="assets/images/4.svg" style="height:35px;" id="scroll-img" alt=""/>
+        <img src="assets/images/4.svg" id="scroll-img" alt=""/>
     </div>
     <footer id="footer-section">
 
@@ -266,9 +270,21 @@
                 </a>
             </p>
             <ul class="social-list">
-                <li class="social-extra">Contact Us</li>
-                <li class="social-extra">Terms of Use</li>
-                <li class="social-extra">Privacy policy</li>
+                <li class="social-extra">
+                    <span>
+                        Contact Us
+                    </span>
+                </li>
+                <li class="social-extra">
+                    <span>
+                        Terms of Use
+                    </span>
+                </li>
+                <li class="social-extra">
+                    <span>
+                        Privacy Policy
+                    </span>
+                </li>
                 <li class="social-extra twitter">
                     <a href="https://twitter.com/thecherryapp">
 
@@ -376,27 +392,49 @@
 
                 if ($(window).width() > 600) {
                     if (index == 6) {
+                        var val,graphicBool;
                         $('.count').each(function () {
+                            console.log("thissing");
+
+                            console.log($(this).hasClass('gr-1'));
+                            if ($(this).hasClass('gr-1')) {
+                                val = 2232;
+                            } else if ($(this).hasClass('gr-2')) {
+                                val = 39979;
+                            } else if ($(this).hasClass('gr-3')) {
+                                val = 781
+                            }
                             $(this).prop('Counter', 0).animate({
-                                Counter: $(this).text()
+                                Counter: val
                             }, {
                                 duration: 1000,
                                 easing: 'swing',
                                 step: function (now) {
+
                                     $(this).text(Math.ceil(now));
+                                    $(this).removeClass('gr-1 gr-2 gr-3');
                                 }
                             });
                         });
-                    } else if (index == 7) {
-                        $('#scroll-img').addClass('up');
-                    } else if (index == 1) {
-                        $('#scroll-img').removeClass('up');
                     }
                 }
+                if (index == 7) {
+                    $('#scroll-img').addClass('up');
+                } else if (index == 1) {
+                    $('#scroll-img').removeClass('up');
+                }
+
             },
             onLeave: function (index, nextIndex, direction) {
                 //before section leaves
+                console.log(index);
                 $('p').removeClass('cool-text');
+                if (index <= 4 && nextIndex > 4) {
+                    $('#brand').attr('data', 'assets/images/logo-black.svg')
+                } else if (index >= 5 && nextIndex < 5 && myslideIndex == 0) {
+                    console.log(nextIndex);
+                    $('#brand').attr('data', 'assets/images/logo-white.svg')
+                }
                 if ($(window).width() > 600) {
                     if (nextIndex == 1) {
                         $('#feature-1 p').addClass('cool-text');
@@ -412,6 +450,7 @@
 
                     } else if (nextIndex == 7) {
                         $('footer').removeClass('dark-theme');
+                        $('footer').addClass('rock-bottom');
                     } else if (nextIndex == 5) {
                         $('.mobile-section').addClass('cool-text');
                         $('#fp-nav ul li a span').addClass('dark-theme');
@@ -423,6 +462,11 @@
                 } else {
                     if (nextIndex == 5) {
                         $('.mobile-section').addClass('cool-text');
+                    }
+                    if (nextIndex == 7) {
+                        $('footer').addClass('rock-bottom');
+                    } else if (index == 7) {
+                        $('footer').removeClass('rock-bottom');
                     }
                 }
                 console.log('leaving ....');
@@ -451,21 +495,21 @@
                                         $('.info-2').addClass('fadeInUp');
                                         $('.info-2').css('display', 'block')
                                         //$('.info-2').hide(500);  $('#feat1').addClass('animated fadeInUp');
-                                        $('.bar-slider').css({'transform': 'translateX(100px)'})
+                                        $('.bar-slider').css({'transform': 'translateX(150px)'})
                                     } else if (myslideIndex == 1) {
                                         $('.info-2').removeClass('fadeInUp');
                                         $('.info-2').addClass('fadeOutDown');
                                         $('.info-3').removeClass('fadeOutDown');
                                         $('.info-3').addClass('fadeInUp');
                                         $('.info-3').css('display', 'block')
-                                        $('.bar-slider').css({'transform': 'translateX(200px)'})
+                                        $('.bar-slider').css({'transform': 'translateX(302px)'})
                                     } else if (myslideIndex == 2) {
                                         $('.info-3').removeClass('fadeInUp');
                                         $('.info-3').addClass('fadeOutDown');
                                         $('.info-4').removeClass('fadeOutDown');
                                         $('.info-4').addClass('fadeInUp');
                                         $('.info-4').css('display', 'block');
-                                        $('.bar-slider').css({'transform': 'translateX(300px)'})
+                                        $('.bar-slider').css({'transform': 'translateX(450px)'})
                                     }
 
                                     sliding = true;
@@ -484,21 +528,21 @@
                                         $('.info-4').addClass('fadeOutDown');
                                         $('.info-3').removeClass('fadeOutDown');
                                         $('.info-3').addClass('fadeInUp');
-                                        $('.bar-slider').css({'transform': 'translateX(200px)'})
+                                        $('.bar-slider').css({'transform': 'translateX(302px)'})
                                         //$('.info-2').css('display' , 'block')
                                     } else if (myslideIndex == 2) {
                                         $('.info-3').removeClass('fadeInUp');
                                         $('.info-3').addClass('fadeOutDown');
                                         $('.info-2').removeClass('fadeOutDown');
                                         $('.info-2').addClass('fadeInUp');
-                                        $('.bar-slider').css({'transform': 'translateX(100px)'})
+                                        $('.bar-slider').css({'transform': 'translateX(150px)'})
                                         //$('.info-2').css('display' , 'block')
                                     } else if (myslideIndex == 1) {
                                         $('.info-2').removeClass('fadeInUp');
                                         $('.info-2').addClass('fadeOutDown');
                                         $('.info-1').removeClass('fadeOutDown');
                                         $('.info-1').addClass('fadeInUp');
-                                        $('.bar-slider').css({'transform': 'translateX(2px)'})
+                                        $('.bar-slider').css({'transform': 'translateX(0px)'})
                                     }
                                     sliding = true;
                                     $.fn.fullpage.moveSlideLeft();
