@@ -31,11 +31,19 @@ FINAL THINGS TO-DO :
 Make tablet and mobile landscape.
 Make laptops responsive ----- need to scale down nav dots , iphone , central text
 Fix info graphics screen. Done.
-Fix feedback section and footer.
-Fix header. (Use cherry web-app header).
-Fix different images for different layouts.
-Finish submitting feedback with error handling andeverything else.
-Fix graphics animation , begin from 0.
+Fix feedback section and footer.done.
+Fix header. (Use cherry web-app header).done.
+Fix different images for different layouts.depends.
+Finish submitting feedback with error handling and everything else.
+Fix graphics animation , begin from 0.done
+
+responsive mobile features and graphics scenes.
+
+
+
+
+
+
 
 
 5px 5px 0 rgba(255, 255, 255, 0.38), 10px 10px 0 rgba(255, 255, 255, 0.57), 15px 15px 0 rgba(255, 255, 255, 0.51), 20px 20px 0 rgba(255, 255, 255, 0.51)
