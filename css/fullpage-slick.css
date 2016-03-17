@@ -741,7 +741,9 @@ ul.slick-dots {
     font-family: 'Roboto';
 }
 .contact:focus {
-    border-bottom: 1px solid #2FC12F;
+
+	
+
 }
 #fp-nav.right {
     right: 5px;
@@ -923,6 +925,9 @@ footer.rock-bottom {
     }
 	.graphics-container {
 		margin: 125px;
+	}
+	.graphic-li {
+		display: table-row;
 	}
 	#it-works {
 		font-size: 35px;
