@@ -119,6 +119,12 @@ section {
     top: 100px;
     height: 80%;
 }
+.feedback-success {
+	transition: all ease-in 0.5s;
+	opacity: 0;
+	display: none;
+	padding: 10px;
+}
 .iphone {
     background: url(../assets/images/phone-01.png) no-repeat;
     background-position: 50% 0%;
@@ -237,7 +243,7 @@ ul.slick-dots {
     left: 50%;
     cursor: pointer;
     text-align: center;
-    bottom: 40px;
+    bottom: 5px;
     padding: 0 10px;
     z-index: 10000;
     -webkit-transform: translateX(-50%);

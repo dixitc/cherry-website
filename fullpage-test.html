@@ -236,7 +236,7 @@
         </div>
 
         <div class="section fp-auto-height" data-anchor="feature4" id="feature-footer">
-            <div class="feedback-container">
+            <div class="feedback-container fc-1">
 
                 <h2 class="feedback-text ft-1">Get in touch</h2>
                 <form method="post">
@@ -258,6 +258,15 @@
 
                 <div style="height:100px;width:100%;"></div>
             </div>
+			<div class="feedback-container fc-2 feedback-success">
+				<h2 style="color:#fff;font-weight:300">Thanks for your feedback!</h2>
+				<p style="color:#fff;width:100%;;font-size:15px;padding:10px">
+					Your response will help us improve
+					our application
+				</p>
+				
+				    <div style="height:100px;width:100%;"></div>
+			</div>
 
         </div>
 
@@ -352,31 +361,40 @@
         var myslideIndex = 0;
         var sliding = false;
         // contact us form
-        $('.submit').on('click', function () {
+        $('.submit').click(function (e) {
+			e.preventDefault();
+		      e.stopPropagation();
+			  var feedback = {
+				  contact: '',
+				  feedback: 'asdf d',
+				  name: ''
+			  };
 
+			  if (feedback.name == "") {
+
+				  feedback.name = "Web anonymous user";
+			  }
             if (feedback.feedback != "" || feedback.feedback != null) {
-                console.log("1");
-                var feedback = {
-                    contact: $("#contact").val(),
-                    feedback: $("#feedback").val(),
-                    name: $("#name").val()
-                };
 
-                if (feedback.name == "") {
-
-                    feedback.name = "Web anonymous user";
-                }
 
                 $.ajax({
-                    url: "http://cherry.triconlabs.com/v1/util/anonymousfeedback.json",
+                    url: "http://cherry.triconslabs.com/v1/util/anonymousfeedback.json",
                     type: "POST",
                     dataType: "json",
                     data: feedback,
                     async: false,
-                    success: function () {},
+                    success: function () {
+						alert('asdf')
+						return false;
+					},
                     error: function () {
+
                         alert("Couldn't post feedback");
+						$('.fc-1').css({'opacity' : 0,'display':'none'});
+						$('.fc-2').css({'opacity': 1 , 'display':'block'});
+						return false;
                     }
+
                 });
             }
 
